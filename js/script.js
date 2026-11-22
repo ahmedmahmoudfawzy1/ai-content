@@ -414,21 +414,9 @@ function sessionItem(s, open) {
       </button>
       <div class="acc-body" id="sess-${s.n}" role="region">
         <div>
-          <div class="grid gap-6 border-t border-white/10 px-5 pb-6 pt-5 md:grid-cols-5">
-            <div class="md:col-span-3">
-              <p class="sub-label">Topics</p>
-              <ul class="topic-list mt-3 space-y-1.5">${s.topics.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
-            </div>
-            <div class="space-y-5 md:col-span-2">
-              <div>
-                <p class="sub-label">In-Class Lab</p>
-                <div class="mt-3 flex flex-wrap gap-2">${s.labs.map((l) => `<span class="lab-chip">${esc(l)}</span>`).join('')}</div>
-              </div>
-              <div>
-                <p class="sub-label">Assignment</p>
-                <p class="mt-2 text-sm leading-7 text-white/70">${esc(s.assignment)}</p>
-              </div>
-            </div>
+          <div class="border-t border-white/10 px-5 pb-6 pt-5">
+            <p class="sub-label">Topics</p>
+            <ul class="topic-list mt-3 space-y-1.5">${s.topics.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
           </div>
         </div>
       </div>
@@ -462,8 +450,7 @@ function selectLevel(id) {
           <h3 class="mt-1 text-xl font-bold leading-snug text-white">${esc(p.title)}</h3>
           <p class="mt-3 text-sm leading-7 text-white/65">${esc(p.text)}</p>
           <div class="mt-5 flex flex-wrap gap-1.5">${p.stack.map((x) => `<span class="lo-tag">${esc(x)}</span>`).join('')}</div>
-          <div class="mt-6 grid grid-cols-2 gap-px overflow-hidden rounded-xl bg-white/10 text-center">
-            <div class="bg-ink/60 p-3"><p class="font-mono text-xl font-semibold text-white">${level.sessions.reduce((a, s) => a + s.labs.length, 0)}</p><p class="sub-label mt-1">Labs</p></div>
+          <div class="mt-6 overflow-hidden rounded-xl bg-white/10 text-center">
             <div class="bg-ink/60 p-3"><p class="font-mono text-xl font-semibold text-white">${level.sessions.length}</p><p class="sub-label mt-1">Sessions</p></div>
           </div>
         </div>
