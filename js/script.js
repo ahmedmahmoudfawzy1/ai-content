@@ -366,7 +366,7 @@ function renderTabs() {
       </span>
       <span class="lt-title">${esc(l.title)}</span>
       <span class="lt-foot">
-        <span class="lt-meta">${l.sessions.length} Sessions · ${pad(l.sessions[0].n)}–${pad(l.sessions[l.sessions.length - 1].n)}</span>
+        <span class="lt-meta">${l.sessions.length} Weeks · ${pad(l.sessions[0].n)}–${pad(l.sessions[l.sessions.length - 1].n)}</span>
         <span class="lt-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </span>
     </button>`).join('');
@@ -451,7 +451,7 @@ function selectLevel(id) {
           <p class="mt-3 text-sm leading-7 text-white/65">${esc(p.text)}</p>
           <div class="mt-5 flex flex-wrap gap-1.5">${p.stack.map((x) => `<span class="lo-tag">${esc(x)}</span>`).join('')}</div>
           <div class="mt-6 overflow-hidden rounded-xl bg-white/10 text-center">
-            <div class="bg-ink/60 p-3"><p class="font-mono text-xl font-semibold text-white">${level.sessions.length}</p><p class="sub-label mt-1">Sessions</p></div>
+            <div class="bg-ink/60 p-3"><p class="font-mono text-xl font-semibold text-white">${level.sessions.length}</p><p class="sub-label mt-1">Weeks</p></div>
           </div>
         </div>
       </aside>

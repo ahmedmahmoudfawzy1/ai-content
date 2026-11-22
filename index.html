@@ -37,7 +37,7 @@
       },
     };
   </script>
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/main.css?v=2" />
 </head>
 
 <body class="bg-paper font-sans text-ink antialiased">
@@ -353,7 +353,7 @@
       <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
           <div class="lg:col-span-7">
-            <p data-reveal class="eyebrow eyebrow-dark">Curriculum · 3 Levels · 20 Sessions</p>
+            <p data-reveal class="eyebrow eyebrow-dark">Curriculum · 3 Levels · 20 Weeks</p>
             <h2 data-reveal style="--d:60ms" class="section-title text-white">رحلة التعلم التفصيلية</h2>
           </div>
           <p data-reveal style="--d:120ms" class="text-lg leading-8 text-white/60 lg:col-span-5">
@@ -364,7 +364,7 @@
         <!-- Level tabs -->
         <div data-reveal class="mt-12 flex items-center gap-2 text-sm text-white/55">
           <svg class="h-4 w-4 text-signal-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V5a2 2 0 0 1 4 0v5"/><path d="M13 10V8a2 2 0 0 1 4 0v3"/><path d="M17 11a2 2 0 0 1 4 0v3a7 7 0 0 1-7 7h-1.5a7 7 0 0 1-5.6-2.8L4.3 15.3a1.9 1.9 0 0 1 2.9-2.5L9 15"/></svg>
-          اختار الـ <span class="en">Level</span> عشان تشوف الـ <span class="en">Sessions</span> بتاعته
+          اختار الـ <span class="en">Level</span> عشان تشوف الـ <span class="en">Weeks</span> بتاعته
         </div>
         <div data-reveal class="mt-4 grid gap-3 md:grid-cols-3" role="tablist" aria-label="Levels" id="levelTabs" dir="ltr"></div>
 
@@ -791,41 +791,31 @@ model.fit(X_train, y_train)
 
   <!-- ============ FOOTER ============ -->
   <footer class="bg-ink-900 text-white/70">
-    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-12 lg:px-8">
-      <div class="md:col-span-5">
-        <span class="inline-block rounded-xl bg-white px-3 py-2">
-          <img src="assets/img/eraasoft-logo.png" alt="EraaSoft" class="h-9 w-auto" loading="lazy" />
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <div class="flex items-center gap-4">
+        <span class="inline-block shrink-0 rounded-lg bg-white px-2.5 py-1.5">
+          <img src="assets/img/eraasoft-logo.png" alt="EraaSoft" class="h-7 w-auto" loading="lazy" />
         </span>
-        <p class="mt-5 max-w-sm leading-8">إيراسوفت، المكان اللي بيحولك من مبتدئ لمحترف.</p>
-        <div class="mt-6 flex gap-2">
+        <p class="text-sm leading-6" dir="ltr"><span class="font-semibold text-spark">#EraaSoft</span> helps you reach your dream.</p>
+      </div>
+
+      <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        <li><span class="text-white">الدقي:</span> 5 شارع مصدق - الدور الثالث</li>
+        <li><span class="text-white">م. نصر:</span> 6 شارع عماد الدين</li>
+      </ul>
+
+      <div class="flex gap-2">
           <a href="https://www.facebook.com/eraasoft" target="_blank" rel="noopener" class="social" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-.9.6-1 1-1h2V2h-3c-3 0-4 2.2-4 4.5V9H8v4h2v9h4v-9h3l.5-4H14z"/></svg></a>
           <a href="https://www.linkedin.com/company/eraasoft" target="_blank" rel="noopener" class="social" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
           <a href="https://www.youtube.com/@eraasoft" target="_blank" rel="noopener" class="social" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15V9l5.8 3-5.8 3z"/></svg></a>
           <a href="https://www.tiktok.com/@eraa_soft" target="_blank" rel="noopener" class="social" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 1 0 4.9 5.7V9.1a7.3 7.3 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.2-1.6z"/></svg></a>
-        </div>
-      </div>
-
-      <div class="md:col-span-3">
-        <h3 class="text-sm font-semibold text-white">تواصل معنا</h3>
-        <ul class="mt-4 space-y-3 text-sm" dir="ltr">
-          <li class="text-end"><a href="tel:+201000143085" class="hover:text-white">010 0014 3085</a></li>
-          <li class="text-end"><a href="tel:01129079963" class="hover:text-white">011 2907 9963</a></li>
-        </ul>
-      </div>
-
-      <div class="md:col-span-4">
-        <h3 class="text-sm font-semibold text-white">عناويننا</h3>
-        <ul class="mt-4 space-y-3 text-sm leading-7">
-          <li><span class="text-white">الدقي:</span> 5 شارع مصدق - الدور الثالث</li>
-          <li><span class="text-white">م. نصر:</span> 6 شارع عماد الدين</li>
-        </ul>
       </div>
     </div>
     <div class="border-t border-white/10">
-      <p class="mx-auto max-w-7xl px-4 py-6 text-center text-xs text-white/40 sm:px-6 lg:px-8" dir="ltr">© <span id="year">2026</span> EraaSoft. All Rights Reserved.</p>
+      <p class="mx-auto max-w-7xl px-4 py-4 text-center text-xs text-white/40 sm:px-6 lg:px-8" dir="ltr">© <span id="year">2026</span> EraaSoft. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.js?v=2"></script>
 </body>
 </html>
