@@ -406,7 +406,7 @@ function sessionItem(s, open) {
           <span class="flex flex-wrap items-center gap-2">
             <span class="acc-title">${esc(s.title)}</span>${badge}
           </span>
-          <span class="acc-sub block">Session ${pad(s.n)} · LO ${s.lo.join(", ")}</span>
+          <span class="acc-sub block">Week ${pad(s.n)}</span>
         </span>
         <span class="acc-chevron" aria-hidden="true">
           <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
