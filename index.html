@@ -1,821 +1,1002 @@
 <!doctype html>
 <html lang="ar" dir="rtl" class="scroll-smooth">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI & Machine Learning Diploma | EraaSoft</title>
-  <meta name="description" content="دبلومة AI & Machine Learning من إيراسوفت — من الصفر لـ AI Engineer في 160 ساعة، 20 Session، و10 مشاريع عملية Live على GitHub و Streamlit." />
-  <meta name="theme-color" content="#0A0F2C" />
-  <link rel="icon" type="image/png" href="assets/img/eraasoft-logo.png" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI & Machine Learning Diploma | EraaSoft</title>
+    <meta name="description" content="دبلومة AI & Machine Learning من إيراسوفت — من الصفر لـ AI Engineer في 160 ساعة، 20 Session، و10 مشاريع عملية Live على GitHub و Streamlit." />
+    <meta name="theme-color" content="#0A0F2C" />
+    <link rel="icon" type="image/png" href="assets/img/eraasoft-logo.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"IBM Plex Sans Arabic"', 'system-ui', 'sans-serif'],
-            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
-          },
-          colors: {
-            ink:   { DEFAULT: '#0A0F2C', 900: '#070B22', 800: '#0E1538', 700: '#151E4A', 600: '#222C5E' },
-            brand: { DEFAULT: '#2B3FD6', 50: '#EEF1FF', 100: '#DDE3FF', 200: '#BAC6FF', 400: '#5A6DF0', 500: '#2B3FD6', 600: '#2232B4', 700: '#1B2890' },
-            signal:{ DEFAULT: '#12B5CB', 50: '#E6F9FB', 300: '#5ED6E6', 500: '#12B5CB', 600: '#0E93A6' },
-            spark: { DEFAULT: '#F4C430', 100: '#FDF3D2', 500: '#F4C430', 600: '#D9A913' },
-            paper: '#F6F7FB',
-            slate: { 450: '#6B7393' },
-          },
-          boxShadow: {
-            card: '0 1px 2px rgba(10,15,44,.04), 0 8px 24px -12px rgba(10,15,44,.12)',
-            lift: '0 2px 4px rgba(10,15,44,.04), 0 24px 48px -20px rgba(43,63,214,.28)',
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"IBM Plex Sans Arabic"', "system-ui", "sans-serif"],
+              mono: ['"IBM Plex Mono"', "ui-monospace", "monospace"],
+            },
+            colors: {
+              ink: { DEFAULT: "#0A0F2C", 900: "#070B22", 800: "#0E1538", 700: "#151E4A", 600: "#222C5E" },
+              brand: { DEFAULT: "#2B3FD6", 50: "#EEF1FF", 100: "#DDE3FF", 200: "#BAC6FF", 400: "#5A6DF0", 500: "#2B3FD6", 600: "#2232B4", 700: "#1B2890" },
+              signal: { DEFAULT: "#12B5CB", 50: "#E6F9FB", 300: "#5ED6E6", 500: "#12B5CB", 600: "#0E93A6" },
+              spark: { DEFAULT: "#F4C430", 100: "#FDF3D2", 500: "#F4C430", 600: "#D9A913" },
+              paper: "#F6F7FB",
+              slate: { 450: "#6B7393" },
+            },
+            boxShadow: {
+              card: "0 1px 2px rgba(10,15,44,.04), 0 8px 24px -12px rgba(10,15,44,.12)",
+              lift: "0 2px 4px rgba(10,15,44,.04), 0 24px 48px -20px rgba(43,63,214,.28)",
+            },
           },
         },
-      },
-    };
-  </script>
-  <link rel="stylesheet" href="css/main.css?v=2" />
-</head>
+      };
+    </script>
+    <link rel="stylesheet" href="css/main.css?v=2" />
+  </head>
 
-<body class="bg-paper font-sans text-ink antialiased">
+  <body class="bg-paper font-sans text-ink antialiased">
+    <!-- ============ NAVBAR ============ -->
+    <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+      <div class="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
+        <a href="#top" class="flex shrink-0 items-center" aria-label="EraaSoft">
+          <img src="assets/img/eraasoft-logo.png" alt="EraaSoft" class="h-10 w-auto sm:h-11" />
+        </a>
 
-  <!-- ============ NAVBAR ============ -->
-  <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
-    <div class="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
-      <a href="#top" class="flex shrink-0 items-center" aria-label="EraaSoft">
-        <img src="assets/img/eraasoft-logo.png" alt="EraaSoft" class="h-10 w-auto sm:h-11" />
-      </a>
+        <nav class="hidden items-center gap-1 lg:flex" aria-label="Primary">
+          <a href="#why" class="nav-link">هتتعلم إيه؟</a>
+          <a href="#accreditation" class="nav-link">الاعتماد</a>
+          <a href="#curriculum" class="nav-link">المنهج التفصيلي</a>
+          <a href="#method" class="nav-link">طريقة التعلم</a>
+          <a href="#outcomes" class="nav-link">مخرجات الدبلومة</a>
+          <a href="#projects" class="nav-link">10 مشاريع</a>
+          <a href="#extras" class="nav-link">المزايا</a>
+        </nav>
 
-      <nav class="hidden items-center gap-1 lg:flex" aria-label="Primary">
-        <a href="#why" class="nav-link">هتتعلم إيه؟</a>
-        <a href="#accreditation" class="nav-link">الاعتماد</a>
-        <a href="#curriculum" class="nav-link">المنهج التفصيلي</a>
-        <a href="#method" class="nav-link">طريقة التعلم</a>
-        <a href="#outcomes" class="nav-link">مخرجات الدبلومة</a>
-        <a href="#projects" class="nav-link">10 مشاريع</a>
-        <a href="#extras" class="nav-link">المزايا</a>
-      </nav>
-
-      <div class="flex items-center gap-2">
-        <button type="button" data-open-form class="btn-primary hidden sm:inline-flex">احجز مكانك</button>
-        <button id="menuBtn" class="grid h-10 w-10 place-items-center rounded-lg border border-ink/10 bg-white text-ink lg:hidden" aria-label="القائمة" aria-expanded="false" aria-controls="mobileMenu">
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <div id="mobileMenu" class="mobile-menu lg:hidden">
-      <nav class="mx-4 mb-4 flex flex-col rounded-2xl border border-ink/10 bg-white p-2 shadow-card" aria-label="Mobile">
-        <a href="#why" class="m-link">هتتعلم إيه؟</a>
-        <a href="#accreditation" class="m-link">الاعتماد</a>
-        <a href="#curriculum" class="m-link">المنهج التفصيلي</a>
-        <a href="#method" class="m-link">طريقة التعلم</a>
-        <a href="#outcomes" class="m-link">مخرجات الدبلومة</a>
-        <a href="#projects" class="m-link">10 مشاريع</a>
-        <a href="#extras" class="m-link">المزايا</a>
-        <button type="button" data-open-form class="btn-primary mt-2 justify-center">احجز مكانك</button>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top">
-
-    <!-- ============ HERO ============ -->
-    <section class="relative overflow-hidden pt-[72px]">
-      <div id="heroAura" class="hero-aura pointer-events-none absolute inset-0" aria-hidden="true">
-        <span class="aura aura-a"></span>
-        <span class="aura aura-b"></span>
-        <span class="aura aura-c"></span>
-        <span class="aura-grain"></span>
-      </div>
-
-      <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 sm:pt-16 lg:grid-cols-12 lg:gap-10 lg:px-8 lg:pb-24 lg:pt-20">
-        <div class="lg:col-span-6">
-          <div data-reveal class="inline-flex items-center gap-2 rounded-full border border-brand/15 bg-white px-3 py-1.5 text-xs font-medium text-brand-700 shadow-sm">
-            <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-spark opacity-70"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-spark"></span></span>
-            <span dir="ltr" class="font-mono tracking-tight">Zero-to-AI-Engineer Track</span>
-          </div>
-
-          <h1 data-reveal style="--d:80ms" class="mt-6 text-[2.35rem] font-bold leading-[1.25] tracking-tight sm:text-5xl lg:text-[3.4rem]">
-            من الصفر لـ
-            <span class="text-brand" dir="ltr">AI&nbsp;Engineer</span>
-            <br class="hidden sm:block" />
-            في <span class="num-underline">160 ساعة</span> عملي
-          </h1>
-
-          <p data-reveal style="--d:160ms" class="mt-6 max-w-xl text-lg leading-8 text-slate-450">
-            دبلومة <span class="en">AI & Machine Learning</span> مصممة للمبتدئين: هتكتب <span class="en">Python</span> نظيف، تنضّف <span class="en">Datasets</span> حقيقية، تبني وتعمل <span class="en">Tuning</span> لـ <span class="en">ML Models</span>، تدخل <span class="en">Deep Learning</span> و<span class="en">Computer Vision</span> و<span class="en">NLP</span>، وتعمل <span class="en">Deploy</span> لمشروعك <span class="en">Live</span>.
-          </p>
-
-          <div data-reveal style="--d:240ms" class="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#curriculum" class="btn-primary btn-lg">
-              استكشف المنهج
-              <svg class="h-4 w-4 -scale-x-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-            <a href="#projects" class="btn-ghost btn-lg">شوف الـ 10 مشاريع</a>
-          </div>
-
-          <dl data-reveal style="--d:320ms" class="mt-8 grid max-w-xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-4">
-            <div class="stat"><dt>Hours</dt><dd><span data-count="160">0</span></dd></div>
-            <div class="stat"><dt>Sessions</dt><dd><span data-count="20">0</span></dd></div>
-            <div class="stat"><dt>Levels</dt><dd><span data-count="3">0</span></dd></div>
-            <div class="stat"><dt>Projects</dt><dd><span data-count="10">0</span></dd></div>
-          </dl>
-        </div>
-
-        <!-- Hero visual -->
-        <div data-reveal style="--d:200ms" class="relative lg:col-span-6">
-          <div class="relative mx-auto max-w-xl overflow-hidden rounded-3xl border border-white/10 bg-ink shadow-lift">
-            <div class="flex items-center justify-between border-b border-white/10 px-5 py-3" dir="ltr">
-              <div class="flex items-center gap-1.5">
-                <span class="h-2.5 w-2.5 rounded-full bg-white/15"></span>
-                <span class="h-2.5 w-2.5 rounded-full bg-white/15"></span>
-                <span class="h-2.5 w-2.5 rounded-full bg-white/15"></span>
-              </div>
-              <span class="font-mono text-[11px] text-white/45">neural_network.ipynb</span>
-              <span class="font-mono text-[11px] text-signal-300">● training</span>
-            </div>
-
-            <div class="relative aspect-[5/4]">
-              <canvas id="netCanvas" class="absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
-              <div class="pointer-events-none absolute inset-x-0 bottom-0 flex justify-between px-6 pb-4 font-mono text-[10px] uppercase tracking-[.18em] text-white/35" dir="ltr">
-                <span>input</span><span>hidden</span><span>hidden</span><span>output</span>
-              </div>
-            </div>
-
-            <div class="border-t border-white/10 bg-ink-900/60 px-5 py-4 font-mono text-[12.5px] leading-6" dir="ltr">
-              <div><span class="text-white/35">In [7]:</span> <span class="text-signal-300">model</span><span class="text-white/70">.fit(X_train, y_train, epochs=</span><span class="text-spark">20</span><span class="text-white/70">)</span></div>
-              <div class="flex items-center gap-3 text-white/55">
-                <span>epoch <span id="epochNum" class="text-white">01</span>/20</span>
-                <span class="h-1 flex-1 overflow-hidden rounded bg-white/10"><span id="epochBar" class="block h-full w-[5%] rounded bg-gradient-to-r from-brand-400 to-signal-300 transition-[width] duration-500"></span></span>
-                <span>acc <span id="accNum" class="text-spark">0.612</span></span>
-              </div>
-            </div>
-          </div>
-
-          <!-- floating chips -->
-          <div class="float-chip -start-4 -top-5 hidden sm:flex" style="--fd:0s">
-            <span class="grid h-8 w-8 place-items-center rounded-lg bg-spark-100 text-spark-600">
-              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            </span>
-            <span class="leading-tight"><span class="block text-[13px] font-semibold">أول AI API</span><span class="block text-[11px] text-slate-450">في أول شهر</span></span>
-          </div>
-          <div class="float-chip -end-4 top-[46%] hidden sm:flex" style="--fd:1.6s">
-            <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-50 text-brand">
-              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M22 2 12 12"/><path d="M16 2h6v6"/></svg>
-            </span>
-            <span class="leading-tight"><span class="block text-[13px] font-semibold" dir="ltr">Deployed Live</span><span class="block text-[11px] text-slate-450" dir="ltr">Streamlit · GitHub</span></span>
-          </div>
+        <div class="flex items-center gap-2">
+          <button type="button" data-open-form class="btn-primary hidden sm:inline-flex">احجز مكانك</button>
+          <button
+            id="menuBtn"
+            class="grid h-10 w-10 place-items-center rounded-lg border border-ink/10 bg-white text-ink lg:hidden"
+            aria-label="القائمة"
+            aria-expanded="false"
+            aria-controls="mobileMenu">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10" /></svg>
+          </button>
         </div>
       </div>
 
-      <!-- Tech stack (static, grouped) -->
-      <div class="relative border-y border-ink/10 bg-white">
+      <div id="mobileMenu" class="mobile-menu lg:hidden">
+        <nav class="mx-4 mb-4 flex flex-col rounded-2xl border border-ink/10 bg-white p-2 shadow-card" aria-label="Mobile">
+          <a href="#why" class="m-link">هتتعلم إيه؟</a>
+          <a href="#accreditation" class="m-link">الاعتماد</a>
+          <a href="#curriculum" class="m-link">المنهج التفصيلي</a>
+          <a href="#method" class="m-link">طريقة التعلم</a>
+          <a href="#outcomes" class="m-link">مخرجات الدبلومة</a>
+          <a href="#projects" class="m-link">10 مشاريع</a>
+          <a href="#extras" class="m-link">المزايا</a>
+          <button type="button" data-open-form class="btn-primary mt-2 justify-center">احجز مكانك</button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ============ HERO ============ -->
+      <section class="relative overflow-hidden pt-[72px]">
+        <div id="heroAura" class="hero-aura pointer-events-none absolute inset-0" aria-hidden="true">
+          <span class="aura aura-a"></span>
+          <span class="aura aura-b"></span>
+          <span class="aura aura-c"></span>
+          <span class="aura-grain"></span>
+        </div>
+
+        <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 sm:pt-16 lg:grid-cols-12 lg:gap-10 lg:px-8 lg:pb-24 lg:pt-20">
+          <div class="lg:col-span-6">
+            <div data-reveal class="inline-flex items-center gap-2 rounded-full border border-brand/15 bg-white px-3 py-1.5 text-xs font-medium text-brand-700 shadow-sm">
+              <span class="relative flex h-2 w-2"
+                ><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-spark opacity-70"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-spark"></span
+              ></span>
+              <span dir="ltr" class="font-mono tracking-tight">Zero-to-AI-Engineer Track</span>
+            </div>
+
+            <h1 data-reveal style="--d: 80ms" class="mt-6 text-[2.35rem] font-bold leading-[1.25] tracking-tight sm:text-5xl lg:text-[3.4rem]">
+              من الصفر لـ
+              <span class="text-brand" dir="ltr">AI&nbsp;Engineer</span>
+              <br class="hidden sm:block" />
+              في <span class="num-underline">160 ساعة</span> عملي
+            </h1>
+
+            <p data-reveal style="--d: 160ms" class="mt-6 max-w-xl text-lg leading-8 text-slate-450">
+              دبلومة <span class="en">AI & Machine Learning</span> مصممة للمبتدئين: هتكتب <span class="en">Python</span> نظيف، تنضّف <span class="en">Datasets</span> حقيقية، تبني وتعمل
+              <span class="en">Tuning</span> لـ <span class="en">ML Models</span>، تدخل <span class="en">Deep Learning</span> و<span class="en">Computer Vision</span> و<span class="en">NLP</span>،
+              وتعمل <span class="en">Deploy</span> لمشروعك <span class="en">Live</span>.
+            </p>
+
+            <div data-reveal style="--d: 240ms" class="mt-8 flex flex-wrap items-center gap-3">
+              <a href="#curriculum" class="btn-primary btn-lg">
+                استكشف المنهج
+                <svg class="h-4 w-4 -scale-x-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+              <a href="#projects" class="btn-ghost btn-lg">شوف الـ 10 مشاريع</a>
+            </div>
+
+            <dl data-reveal style="--d: 320ms" class="mt-8 grid max-w-xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-4">
+              <div class="stat">
+                <dt>Hours</dt>
+                <dd><span data-count="160">0</span></dd>
+              </div>
+              <div class="stat">
+                <dt>Weeks</dt>
+                <dd><span data-count="20">0</span></dd>
+              </div>
+              <div class="stat">
+                <dt>Levels</dt>
+                <dd><span data-count="3">0</span></dd>
+              </div>
+              <div class="stat">
+                <dt>Projects</dt>
+                <dd><span data-count="10">0</span></dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Hero visual -->
+          <div data-reveal style="--d: 200ms" class="relative lg:col-span-6">
+            <div class="relative mx-auto max-w-xl overflow-hidden rounded-3xl border border-white/10 bg-ink shadow-lift">
+              <div class="flex items-center justify-between border-b border-white/10 px-5 py-3" dir="ltr">
+                <div class="flex items-center gap-1.5">
+                  <span class="h-2.5 w-2.5 rounded-full bg-white/15"></span>
+                  <span class="h-2.5 w-2.5 rounded-full bg-white/15"></span>
+                  <span class="h-2.5 w-2.5 rounded-full bg-white/15"></span>
+                </div>
+                <span class="font-mono text-[11px] text-white/45">neural_network.ipynb</span>
+                <span class="font-mono text-[11px] text-signal-300">● training</span>
+              </div>
+
+              <div class="relative aspect-[5/4]">
+                <canvas id="netCanvas" class="absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
+                <div class="pointer-events-none absolute inset-x-0 bottom-0 flex justify-between px-6 pb-4 font-mono text-[10px] uppercase tracking-[.18em] text-white/35" dir="ltr">
+                  <span>input</span><span>hidden</span><span>hidden</span><span>output</span>
+                </div>
+              </div>
+
+              <div class="border-t border-white/10 bg-ink-900/60 px-5 py-4 font-mono text-[12.5px] leading-6" dir="ltr">
+                <div>
+                  <span class="text-white/35">In [7]:</span> <span class="text-signal-300">model</span><span class="text-white/70">.fit(X_train, y_train, epochs=</span
+                  ><span class="text-spark">20</span><span class="text-white/70">)</span>
+                </div>
+                <div class="flex items-center gap-3 text-white/55">
+                  <span>epoch <span id="epochNum" class="text-white">01</span>/20</span>
+                  <span class="h-1 flex-1 overflow-hidden rounded bg-white/10"
+                    ><span id="epochBar" class="block h-full w-[5%] rounded bg-gradient-to-r from-brand-400 to-signal-300 transition-[width] duration-500"></span
+                  ></span>
+                  <span>acc <span id="accNum" class="text-spark">0.612</span></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- floating chips -->
+            <div class="float-chip -start-4 -top-5 hidden sm:flex" style="--fd: 0s">
+              <span class="grid h-8 w-8 place-items-center rounded-lg bg-spark-100 text-spark-600">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </span>
+              <span class="leading-tight"><span class="block text-[13px] font-semibold">أول AI API</span><span class="block text-[11px] text-slate-450">في أول شهر</span></span>
+            </div>
+            <div class="float-chip -end-4 top-[46%] hidden sm:flex" style="--fd: 1.6s">
+              <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-50 text-brand">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a10 10 0 1 0 10 10" />
+                  <path d="M22 2 12 12" />
+                  <path d="M16 2h6v6" />
+                </svg>
+              </span>
+              <span class="leading-tight"
+                ><span class="block text-[13px] font-semibold" dir="ltr">Deployed Live</span><span class="block text-[11px] text-slate-450" dir="ltr">Streamlit · GitHub</span></span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech stack (static, grouped) -->
+        <div class="relative border-y border-ink/10 bg-white">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col gap-6 py-8 lg:flex-row lg:items-stretch lg:gap-10">
+              <div data-reveal class="shrink-0 lg:w-48 lg:py-2">
+                <p class="eyebrow">Tech Stack</p>
+                <p class="mt-2 font-semibold leading-7">الأدوات اللي هتشتغل بيها</p>
+              </div>
+              <ol class="stack-grid flex-1" dir="ltr">
+                <li data-reveal class="stack-col">
+                  <span class="stack-step">01 · Code</span>
+                  <ul>
+                    <li>Python</li>
+                    <li>Jupyter</li>
+                    <li>Google Colab</li>
+                  </ul>
+                </li>
+                <li data-reveal style="--d: 70ms" class="stack-col">
+                  <span class="stack-step">02 · Data</span>
+                  <ul>
+                    <li>NumPy</li>
+                    <li>Pandas</li>
+                    <li>Matplotlib</li>
+                    <li>Seaborn</li>
+                  </ul>
+                </li>
+                <li data-reveal style="--d: 140ms" class="stack-col">
+                  <span class="stack-step">03 · ML</span>
+                  <ul>
+                    <li>Scikit-Learn</li>
+                    <li>XGBoost</li>
+                  </ul>
+                </li>
+                <li data-reveal style="--d: 210ms" class="stack-col">
+                  <span class="stack-step">04 · Deep Learning</span>
+                  <ul>
+                    <li>TensorFlow</li>
+                    <li>Keras</li>
+                    <li>OpenCV</li>
+                    <li>HuggingFace</li>
+                  </ul>
+                </li>
+                <li data-reveal style="--d: 280ms" class="stack-col">
+                  <span class="stack-step">05 · Deploy</span>
+                  <ul>
+                    <li>Streamlit</li>
+                    <li>Gradio</li>
+                    <li>GitHub</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ WHY ============ -->
+      <section id="why" class="section">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="flex flex-col gap-6 py-8 lg:flex-row lg:items-stretch lg:gap-10">
-            <div data-reveal class="shrink-0 lg:w-48 lg:py-2">
-              <p class="eyebrow">Tech Stack</p>
-              <p class="mt-2 font-semibold leading-7">الأدوات اللي هتشتغل بيها</p>
+          <div class="grid gap-10 lg:grid-cols-12 lg:items-end">
+            <div class="lg:col-span-7">
+              <p data-reveal class="eyebrow">Why EraaSoft</p>
+              <h2 data-reveal style="--d: 60ms" class="section-title">ليه خريج إيراسوفت مختلف؟</h2>
             </div>
-            <ol class="stack-grid flex-1" dir="ltr">
-              <li data-reveal class="stack-col">
-                <span class="stack-step">01 · Code</span>
-                <ul><li>Python</li><li>Jupyter</li><li>Google Colab</li></ul>
-              </li>
-              <li data-reveal style="--d:70ms" class="stack-col">
-                <span class="stack-step">02 · Data</span>
-                <ul><li>NumPy</li><li>Pandas</li><li>Matplotlib</li><li>Seaborn</li></ul>
-              </li>
-              <li data-reveal style="--d:140ms" class="stack-col">
-                <span class="stack-step">03 · ML</span>
-                <ul><li>Scikit-Learn</li><li>XGBoost</li></ul>
-              </li>
-              <li data-reveal style="--d:210ms" class="stack-col">
-                <span class="stack-step">04 · Deep Learning</span>
-                <ul><li>TensorFlow</li><li>Keras</li><li>OpenCV</li><li>HuggingFace</li></ul>
-              </li>
-              <li data-reveal style="--d:280ms" class="stack-col">
-                <span class="stack-step">05 · Deploy</span>
-                <ul><li>Streamlit</li><li>Gradio</li><li>GitHub</li></ul>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ WHY ============ -->
-    <section id="why" class="section">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid gap-10 lg:grid-cols-12 lg:items-end">
-          <div class="lg:col-span-7">
-            <p data-reveal class="eyebrow">Why EraaSoft</p>
-            <h2 data-reveal style="--d:60ms" class="section-title">ليه خريج إيراسوفت مختلف؟</h2>
-          </div>
-          <p data-reveal style="--d:120ms" class="text-lg leading-8 text-slate-450 lg:col-span-5">
-            السوق مش محتاج حد حافظ <span class="en">Syntax</span>. محتاج <span class="en">Junior AI Engineer</span> يقدر ياخد <span class="en">Data</span> حقيقية ويطلّع منها <span class="en">Model</span> شغال و<span class="en">App</span> الناس تستخدمه.
-          </p>
-        </div>
-
-        <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          <article data-reveal class="feature-card">
-            <div class="feature-icon bg-brand-50 text-brand">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 9-4 3 4 3"/><path d="m16 9 4 3-4 3"/><path d="m14 5-4 14"/></svg>
-            </div>
-            <p class="feature-kpi" dir="ltr">70% Applied</p>
-            <h3 class="feature-title">Top-Down Learning</h3>
-            <p class="feature-text">أغلب وقت الـ <span class="en">Session</span> بيبقى <span class="en">Live Coding</span> و<span class="en">Labs</span>. من غير كود جاهز تنسخه وتلصقه — كل سطر بتفهمه وانت بتكتبه.</p>
-          </article>
-
-          <article data-reveal style="--d:80ms" class="feature-card">
-            <div class="feature-icon bg-spark-100 text-spark-600">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            </div>
-            <p class="feature-kpi" dir="ltr">Quick Win</p>
-            <h3 class="feature-title">أول <span class="en">AI API</span> في الشهر الأول</h3>
-            <p class="feature-text">من <span class="en">Session 4</span> هتربط برنامجك بـ <span class="en">Pretrained AI API</span> حقيقي — عشان تشوف الـ <span class="en">AI</span> شغال من أول شهر.</p>
-          </article>
-
-          <article data-reveal style="--d:160ms" class="feature-card">
-            <div class="feature-icon bg-signal-50 text-signal-600">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-6"/></svg>
-            </div>
-            <p class="feature-kpi" dir="ltr">Math for AI</p>
-            <h3 class="feature-title"><span class="en">Statistics & Linear Algebra</span> بشكل عملي</h3>
-            <p class="feature-text">هتفهم الـ <span class="en">Vectors</span> و<span class="en">Distributions</span> و<span class="en">Gradient Descent</span> بالرسم والكود، من غير تعقيد رياضي.</p>
-          </article>
-
-          <article data-reveal style="--d:240ms" class="feature-card">
-            <div class="feature-icon bg-ink text-white">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
-            </div>
-            <p class="feature-kpi" dir="ltr">10 Projects</p>
-            <h3 class="feature-title"><span class="en">Portfolio</span> شغال <span class="en">Live</span></h3>
-            <p class="feature-text">هتتخرج بـ 10 مشاريع على <span class="en">GitHub</span> وآخرهم <span class="en">AI Web App</span> متاح لأي حد على <span class="en">Streamlit Cloud</span>.</p>
-          </article>
-        </div>
-
-        <!-- Audience strip -->
-        <div data-reveal class="mt-6 flex flex-col gap-4 rounded-2xl border border-ink/10 bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
-          <div class="flex items-center gap-3">
-            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-paper text-ink">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </span>
-            <p class="font-semibold">الدبلومة دي مناسبة ليك لو انت:</p>
-          </div>
-          <ul class="flex flex-wrap gap-2" dir="ltr">
-            <li class="pill">Beginner — no coding background</li>
-            <li class="pill">Non-CS Graduate</li>
-            <li class="pill">Fresh Graduate</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ ACCREDITATION ============ -->
-    <section id="accreditation" class="section relative overflow-hidden border-t border-ink/10 bg-white">
-      <div class="accr-bg pointer-events-none absolute inset-0" aria-hidden="true"></div>
-      <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:px-8">
-
-        <div class="lg:col-span-6">
-          <p data-reveal class="eyebrow !text-emerald-700">Officially Accredited</p>
-          <h2 data-reveal style="--d:60ms" class="section-title">
-            شهادتك معتمدة من
-            <span class="accr-highlight">نقابة المهندسين المصرية</span>
-          </h2>
-          <p data-reveal style="--d:120ms" class="mt-6 max-w-xl text-lg leading-8 text-slate-450">
-            إيراسوفت في شراكة استراتيجية مع نقابة المهندسين المصرية — يعني الشهادة اللي هتاخدها في آخر الدبلومة معتمدة رسميًا، وليها وزن حقيقي في الـ <span class="en">CV</span> بتاعك.<br /><span class="text-sm text-slate-450/80">* للمؤهلين حسب شروط النقابة.</span>
-          </p>
-
-          <ul class="mt-8 space-y-3">
-            <li data-reveal style="--d:160ms" class="accr-point">
-              <span class="accr-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span>
-              <span><b class="block">شهادة معتمدة رسميًا</b><span class="text-sm leading-7 text-slate-450">بالشراكة مع نقابة المهندسين المصرية.</span></span>
-            </li>
-            <li data-reveal style="--d:220ms" class="accr-point">
-              <span class="accr-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span>
-              <span><b class="block">معايير جودة عالية</b><span class="text-sm leading-7 text-slate-450">منهج متوافق مع متطلبات سوق العمل.</span></span>
-            </li>
-            <li data-reveal style="--d:280ms" class="accr-point">
-              <span class="accr-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span>
-              <span><b class="block">تضيفها لـ <span class="en">CV</span> و<span class="en">LinkedIn</span></b><span class="text-sm leading-7 text-slate-450">إثبات رسمي للـ 160 ساعة اللي اتعلمتها.</span></span>
-            </li>
-          </ul>
-
-          <div data-reveal style="--d:340ms" class="mt-9 flex flex-wrap items-center gap-3">
-            <button type="button" data-open-form class="btn-primary btn-lg">احجز مكانك</button>
-            <span class="text-sm text-slate-450">الأماكن محدودة في كل <span class="en">Group</span></span>
-          </div>
-        </div>
-
-        <!-- Certificate preview -->
-        <div data-reveal style="--d:120ms" class="lg:col-span-6">
-          <div class="cert-wrap">
-            <div class="cert" dir="ltr">
-              <div class="cert-inner">
-                <div class="flex items-start justify-between gap-4">
-                  <img src="assets/img/eraasoft-logo.png" alt="EraaSoft" class="h-9 w-auto sm:h-10" />
-                  <img src="assets/img/engineers-syndicate.jpeg" alt="Egyptian Engineers Syndicate" class="h-12 w-12 rounded-md object-contain sm:h-14 sm:w-14" />
-                </div>
-                <p class="cert-kicker">Certificate of Completion</p>
-                <p class="mt-3 text-[11px] text-slate-450 sm:text-xs">This is to certify that</p>
-                <p class="cert-name">Your Name Here</p>
-                <p class="text-[11px] text-slate-450 sm:text-xs">has successfully completed the</p>
-                <p class="cert-course">AI &amp; Machine Learning Diploma</p>
-                <p class="cert-meta">160 Hours · 20 Sessions · 10 Projects</p>
-                <div class="mt-6 flex items-end justify-between gap-6">
-                  <div class="cert-sign"><span></span><p>EraaSoft</p></div>
-                  <div class="cert-seal" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                      <defs><path id="sealPath" d="M50 50 m-36 0 a36 36 0 1 1 72 0 a36 36 0 1 1 -72 0"/></defs>
-                      <circle cx="50" cy="50" r="47" fill="#F4C430"/>
-                      <circle cx="50" cy="50" r="41" fill="none" stroke="#0A0F2C" stroke-opacity=".25" stroke-dasharray="2 3"/>
-                      <text font-family="IBM Plex Mono, monospace" font-size="8.5" font-weight="600" fill="#0A0F2C" letter-spacing="2.4"><textPath href="#sealPath">ACCREDITED · CERTIFIED · ACCREDITED ·</textPath></text>
-                      <path d="m38 50 8 8 16-17" fill="none" stroke="#0A0F2C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                  <div class="cert-sign"><span></span><p>Engineers Syndicate</p></div>
-                </div>
-              </div>
-            </div>
-            <span class="cert-tag">Sample</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CURRICULUM ============ -->
-    <section id="curriculum" class="section relative overflow-hidden bg-ink text-white">
-      <div class="dark-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
-      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
-          <div class="lg:col-span-7">
-            <p data-reveal class="eyebrow eyebrow-dark">Curriculum · 3 Levels · 20 Weeks</p>
-            <h2 data-reveal style="--d:60ms" class="section-title text-white">رحلة التعلم التفصيلية</h2>
-          </div>
-          <p data-reveal style="--d:120ms" class="text-lg leading-8 text-white/60 lg:col-span-5">
-            3 <span class="en">Levels</span> متدرجة — كل <span class="en">Session</span> مدتها 5 ساعات.
-          </p>
-        </div>
-
-        <!-- Level tabs -->
-        <div data-reveal class="mt-12 flex items-center gap-2 text-sm text-white/55">
-          <svg class="h-4 w-4 text-signal-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V5a2 2 0 0 1 4 0v5"/><path d="M13 10V8a2 2 0 0 1 4 0v3"/><path d="M17 11a2 2 0 0 1 4 0v3a7 7 0 0 1-7 7h-1.5a7 7 0 0 1-5.6-2.8L4.3 15.3a1.9 1.9 0 0 1 2.9-2.5L9 15"/></svg>
-          اختار الـ <span class="en">Level</span> عشان تشوف الـ <span class="en">Weeks</span> بتاعته
-        </div>
-        <div data-reveal class="mt-4 grid gap-3 md:grid-cols-3" role="tablist" aria-label="Levels" id="levelTabs" dir="ltr"></div>
-
-        <!-- Level panel -->
-        <div id="levelPanel" class="mt-8"></div>
-      </div>
-    </section>
-
-    <!-- ============ METHOD ============ -->
-    <section id="method" class="section">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
-          <div class="lg:col-span-7">
-            <p data-reveal class="eyebrow">How You Learn</p>
-            <h2 data-reveal style="--d:60ms" class="section-title"><span class="en">160</span> ساعة.. مش بس <span class="en">Code</span></h2>
-          </div>
-          <p data-reveal style="--d:120ms" class="text-lg leading-8 text-slate-450 lg:col-span-5">
-            الدبلومة معمولة من 3 مسارات شغالين مع بعض: تتعلم الجانب التقني، تطبّقه بإيدك، وتتجهز إنك تقدّم نفسك لسوق العمل.
-          </p>
-        </div>
-
-        <!-- 160h formula -->
-        <div data-reveal class="formula mt-12">
-          <div class="formula-total">
-            <p class="font-mono text-xs uppercase tracking-[.16em] text-white/50" dir="ltr">Total</p>
-            <p class="mt-2 font-mono text-5xl font-semibold leading-none text-white" dir="ltr">160<span class="text-xl text-spark">h</span></p>
-            <p class="mt-3 text-sm leading-7 text-white/60">إجمالي ساعات الدبلومة</p>
+            <p data-reveal style="--d: 120ms" class="text-lg leading-8 text-slate-450 lg:col-span-5">
+              السوق مش محتاج حد حافظ <span class="en">Syntax</span>. محتاج <span class="en">Junior AI Engineer</span> يقدر ياخد <span class="en">Data</span> حقيقية ويطلّع منها
+              <span class="en">Model</span> شغال و<span class="en">App</span> الناس تستخدمه.
+            </p>
           </div>
 
-          <article class="formula-card">
-            <span class="formula-idx" dir="ltr">01</span>
-            <h3 class="formula-title" dir="ltr">Technical Sessions</h3>
-            <p class="formula-text">20 <span class="en">Session</span> بتشرح المنهج كله بـ <span class="en">Live Coding</span> و<span class="en">Labs</span>، من <span class="en">Python</span> لحد الـ <span class="en">Deployment</span>.</p>
-          </article>
-
-          <article class="formula-card">
-            <span class="formula-idx" dir="ltr">02</span>
-            <h3 class="formula-title" dir="ltr">Practical Workshops</h3>
-            <p class="formula-text">ورش أسبوعية عملية: <span class="en">Code Review</span> و<span class="en">Debugging</span> لشغلك، و<span class="en">Case Study</span> جديدة بـ <span class="en">Dataset</span> مختلف.</p>
-          </article>
-
-          <article class="formula-card">
-            <span class="formula-idx" dir="ltr">03</span>
-            <h3 class="formula-title" dir="ltr">Impact Sessions</h3>
-            <p class="formula-text"><span class="en">Sessions</span> بتجهزك لسوق العمل:</p>
-            <ul class="mt-3 flex flex-wrap gap-1.5">
-              <li class="impact-chip">Interview Skills</li>
-              <li class="impact-chip">Communication Skills</li>
-              <li class="impact-chip">CV Writing</li>
-              <li class="impact-chip">LinkedIn Profile</li>
-              <li class="impact-chip">Presentation Skills</li>
-            </ul>
-          </article>
-        </div>
-
-        <!-- 5-hour timeline -->
-        <div class="mt-20 max-w-3xl">
-          <h3 data-reveal class="text-2xl font-bold sm:text-[1.7rem]">شكل الـ <span class="en">Session</span> الواحدة</h3>
-          <p data-reveal style="--d:60ms" class="mt-3 leading-8 text-slate-450">
-            كل <span class="en">Technical Session</span> ماشية بنفس الترتيب: فكرة، كود، وبعدين ربط بالـ <span class="en">Business</span>.
-          </p>
-        </div>
-        <div data-reveal class="sflow mt-8">
-
-          <ol class="sflow-steps">
-            <!-- 1. Concept -->
-            <li class="sflow-step step-concept">
-              <div class="sflow-art" aria-hidden="true">
-                <svg viewBox="0 0 160 96" fill="none">
-                  <circle cx="80" cy="44" r="30" fill="currentColor" opacity=".14"/>
-                  <path d="M80 22a17 17 0 0 0-10 30.8V60h20v-7.2A17 17 0 0 0 80 22Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-                  <path d="M72 68h16M74 75h12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                  <path d="M80 10v-4M104 20l3-3M56 20l-3-3M114 44h4M42 44h4" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                  <rect x="14" y="58" width="26" height="24" rx="5" fill="currentColor" opacity=".22"/>
-                  <path d="M19 76l5-6 4 3 7-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-                  <rect x="120" y="58" width="26" height="24" rx="5" fill="currentColor" opacity=".22"/>
-                  <circle cx="133" cy="70" r="6" stroke="currentColor" stroke-width="2.4"/>
-                  <path d="M133 64v6h6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <article data-reveal class="feature-card">
+              <div class="feature-icon bg-brand-50 text-brand">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m8 9-4 3 4 3" />
+                  <path d="m16 9 4 3-4 3" />
+                  <path d="m14 5-4 14" />
                 </svg>
               </div>
-              <div class="sflow-meta">
-                <span class="sflow-num" dir="ltr">01</span>
-                <span class="sflow-time" dir="ltr">Hour 1 · 60m</span>
-              </div>
-              <h4 class="sflow-title" dir="ltr">Concept &amp; Real-World Example</h4>
-              <p class="sflow-text">بنشرح الفكرة الأساسية ونربطها بمثال حقيقي من السوق، عشان تعرف هتستخدمها فين.</p>
-            </li>
+              <p class="feature-kpi" dir="ltr">70% Applied</p>
+              <h3 class="feature-title">Top-Down Learning</h3>
+              <p class="feature-text">
+                أغلب وقت الـ <span class="en">Session</span> بيبقى <span class="en">Live Coding</span> و<span class="en">Labs</span>. من غير كود جاهز تنسخه وتلصقه — كل سطر بتفهمه وانت بتكتبه.
+              </p>
+            </article>
 
-            <!-- 2. Live coding -->
-            <li class="sflow-step step-code is-main">
-              <div class="sflow-code" dir="ltr" aria-hidden="true">
-                <div class="sflow-code-bar"><i></i><i></i><i></i><span>session.ipynb</span></div>
-                <pre><span class="c-k">import</span> pandas <span class="c-k">as</span> pd
+            <article data-reveal style="--d: 80ms" class="feature-card">
+              <div class="feature-icon bg-spark-100 text-spark-600">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+              </div>
+              <p class="feature-kpi" dir="ltr">Quick Win</p>
+              <h3 class="feature-title">أول نتيجة ملموسة بسرعة</h3>
+              <p class="feature-text">في أول شهر هتبني برنامج بيستخدم <span class="en">AI</span> حقيقي — وده بيديك دفعة تكمّل باقي الدبلومة.</p>
+            </article>
+
+            <article data-reveal style="--d: 160ms" class="feature-card">
+              <div class="feature-icon bg-signal-50 text-signal-600">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 3v18h18" />
+                  <path d="m7 14 4-4 4 4 5-6" />
+                </svg>
+              </div>
+              <p class="feature-kpi" dir="ltr">Math for AI</p>
+              <h3 class="feature-title"><span class="en">Statistics & Linear Algebra</span> بشكل عملي</h3>
+              <p class="feature-text">هتفهم الـ <span class="en">Vectors</span> و<span class="en">Distributions</span> و<span class="en">Gradient Descent</span> بالرسم والكود، من غير تعقيد رياضي.</p>
+            </article>
+
+            <article data-reveal style="--d: 240ms" class="feature-card">
+              <div class="feature-icon bg-ink text-white">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="14" rx="2" />
+                  <path d="M8 21h8M12 18v3" />
+                </svg>
+              </div>
+              <p class="feature-kpi" dir="ltr">10 Projects</p>
+              <h3 class="feature-title"><span class="en">Portfolio</span> شغال <span class="en">Live</span></h3>
+              <p class="feature-text">هتتخرج بـ 10 مشاريع على <span class="en">GitHub</span> وآخرهم <span class="en">AI Web App</span> متاح لأي حد على <span class="en">Streamlit Cloud</span>.</p>
+            </article>
+          </div>
+
+          <!-- Audience strip -->
+          <div data-reveal class="mt-6 flex flex-col gap-4 rounded-2xl border border-ink/10 bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-paper text-ink">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </span>
+              <p class="font-semibold">الدبلومة دي مناسبة ليك لو انت:</p>
+            </div>
+            <ul class="flex flex-wrap gap-2" dir="ltr">
+              <li class="pill">Beginner — no coding background</li>
+              <li class="pill">Non-CS Graduate</li>
+              <li class="pill">Fresh Graduate</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ACCREDITATION ============ -->
+      <section id="accreditation" class="section relative overflow-hidden border-t border-ink/10 bg-white">
+        <div class="accr-bg pointer-events-none absolute inset-0" aria-hidden="true"></div>
+        <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:px-8">
+          <div class="lg:col-span-6">
+            <p data-reveal class="eyebrow !text-emerald-700">Officially Accredited</p>
+            <h2 data-reveal style="--d: 60ms" class="section-title">
+              شهادتك معتمدة من
+              <span class="accr-highlight">نقابة المهندسين المصرية</span>
+            </h2>
+            <p data-reveal style="--d: 120ms" class="mt-6 max-w-xl text-lg leading-8 text-slate-450">
+              إيراسوفت في شراكة استراتيجية مع نقابة المهندسين المصرية — يعني الشهادة اللي هتاخدها في آخر الدبلومة معتمدة رسميًا، وليها وزن حقيقي في الـ <span class="en">CV</span> بتاعك.<br /><span
+                class="text-sm text-slate-450/80"
+                >* للمؤهلين حسب شروط النقابة.</span
+              >
+            </p>
+
+            <ul class="mt-8 space-y-3">
+              <li data-reveal style="--d: 160ms" class="accr-point">
+                <span class="accr-check"
+                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10" /></svg
+                ></span>
+                <span><b class="block">شهادة معتمدة رسميًا</b><span class="text-sm leading-7 text-slate-450">بالشراكة مع نقابة المهندسين المصرية.</span></span>
+              </li>
+              <li data-reveal style="--d: 220ms" class="accr-point">
+                <span class="accr-check"
+                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10" /></svg
+                ></span>
+                <span><b class="block">معايير جودة عالية</b><span class="text-sm leading-7 text-slate-450">منهج متوافق مع متطلبات سوق العمل.</span></span>
+              </li>
+              <li data-reveal style="--d: 280ms" class="accr-point">
+                <span class="accr-check"
+                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10" /></svg
+                ></span>
+                <span
+                  ><b class="block">تضيفها لـ <span class="en">CV</span> و<span class="en">LinkedIn</span></b
+                  ><span class="text-sm leading-7 text-slate-450">إثبات رسمي للـ 160 ساعة اللي اتعلمتها.</span></span
+                >
+              </li>
+            </ul>
+
+            <div data-reveal style="--d: 340ms" class="mt-9 flex flex-wrap items-center gap-3">
+              <button type="button" data-open-form class="btn-primary btn-lg">احجز مكانك</button>
+              <span class="text-sm text-slate-450">الأماكن محدودة في كل <span class="en">Group</span></span>
+            </div>
+          </div>
+
+          <!-- Certificate preview -->
+          <div data-reveal style="--d: 120ms" class="lg:col-span-6">
+            <div class="cert-wrap">
+              <div class="cert" dir="ltr">
+                <div class="cert-inner">
+                  <div class="flex items-start justify-between gap-4">
+                    <img src="assets/img/eraasoft-logo.png" alt="EraaSoft" class="h-9 w-auto sm:h-10" />
+                    <img src="assets/img/engineers-syndicate.jpeg" alt="Egyptian Engineers Syndicate" class="h-12 w-12 rounded-md object-contain sm:h-14 sm:w-14" />
+                  </div>
+                  <p class="cert-kicker">Certificate of Completion</p>
+                  <p class="mt-3 text-[11px] text-slate-450 sm:text-xs">This is to certify that</p>
+                  <p class="cert-name">Your Name Here</p>
+                  <p class="text-[11px] text-slate-450 sm:text-xs">has successfully completed the</p>
+                  <p class="cert-course">AI &amp; Machine Learning Diploma</p>
+                  <p class="cert-meta">160 Hours · 20 Sessions · 10 Projects</p>
+                  <div class="mt-6 flex items-end justify-between gap-6">
+                    <div class="cert-sign">
+                      <span></span>
+                      <p>EraaSoft</p>
+                    </div>
+                    <div class="cert-seal" aria-hidden="true">
+                      <svg viewBox="0 0 100 100">
+                        <defs><path id="sealPath" d="M50 50 m-36 0 a36 36 0 1 1 72 0 a36 36 0 1 1 -72 0" /></defs>
+                        <circle cx="50" cy="50" r="47" fill="#F4C430" />
+                        <circle cx="50" cy="50" r="41" fill="none" stroke="#0A0F2C" stroke-opacity=".25" stroke-dasharray="2 3" />
+                        <text font-family="IBM Plex Mono, monospace" font-size="8.5" font-weight="600" fill="#0A0F2C" letter-spacing="2.4">
+                          <textPath href="#sealPath">ACCREDITED · CERTIFIED · ACCREDITED ·</textPath>
+                        </text>
+                        <path d="m38 50 8 8 16-17" fill="none" stroke="#0A0F2C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <div class="cert-sign">
+                      <span></span>
+                      <p>Engineers Syndicate</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="cert-tag">Sample</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CURRICULUM ============ -->
+      <section id="curriculum" class="section relative overflow-hidden bg-ink text-white">
+        <div class="dark-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
+            <div class="lg:col-span-7">
+              <p data-reveal class="eyebrow eyebrow-dark">Curriculum · 3 Levels · 20 Weeks</p>
+              <h2 data-reveal style="--d: 60ms" class="section-title text-white">رحلة التعلم التفصيلية</h2>
+            </div>
+            <p data-reveal style="--d: 120ms" class="text-lg leading-8 text-white/60 lg:col-span-5">3 <span class="en">Levels</span> متدرجة — كل <span class="en">Session</span> مدتها 5 ساعات.</p>
+          </div>
+
+          <!-- Level tabs -->
+          <div data-reveal class="mt-12 flex items-center gap-2 text-sm text-white/55">
+            <svg class="h-4 w-4 text-signal-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 11V5a2 2 0 0 1 4 0v5" />
+              <path d="M13 10V8a2 2 0 0 1 4 0v3" />
+              <path d="M17 11a2 2 0 0 1 4 0v3a7 7 0 0 1-7 7h-1.5a7 7 0 0 1-5.6-2.8L4.3 15.3a1.9 1.9 0 0 1 2.9-2.5L9 15" />
+            </svg>
+            اختار الـ <span class="en">Level</span> عشان تشوف الـ <span class="en">Weeks</span> بتاعته
+          </div>
+          <div data-reveal class="mt-4 grid gap-3 md:grid-cols-3" role="tablist" aria-label="Levels" id="levelTabs" dir="ltr"></div>
+
+          <!-- Level panel -->
+          <div id="levelPanel" class="mt-8"></div>
+        </div>
+      </section>
+
+      <!-- ============ METHOD ============ -->
+      <section id="method" class="section">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
+            <div class="lg:col-span-7">
+              <p data-reveal class="eyebrow">How You Learn</p>
+              <h2 data-reveal style="--d: 60ms" class="section-title"><span class="en">160</span> ساعة.. مش بس <span class="en">Code</span></h2>
+            </div>
+            <p data-reveal style="--d: 120ms" class="text-lg leading-8 text-slate-450 lg:col-span-5">
+              الدبلومة معمولة من 3 مسارات شغالين مع بعض: تتعلم الجانب التقني، تطبّقه بإيدك، وتتجهز إنك تقدّم نفسك لسوق العمل.
+            </p>
+          </div>
+
+          <!-- 160h formula -->
+          <div data-reveal class="formula mt-12">
+            <div class="formula-total">
+              <p class="font-mono text-xs uppercase tracking-[.16em] text-white/50" dir="ltr">Total</p>
+              <p class="mt-2 font-mono text-5xl font-semibold leading-none text-white" dir="ltr">160<span class="text-xl text-spark">h</span></p>
+              <p class="mt-3 text-sm leading-7 text-white/60">إجمالي ساعات الدبلومة</p>
+            </div>
+
+            <article class="formula-card">
+              <span class="formula-idx" dir="ltr">01</span>
+              <h3 class="formula-title" dir="ltr">Technical Sessions</h3>
+              <p class="formula-text">
+                20 <span class="en">Session</span> بتشرح المنهج كله بـ <span class="en">Live Coding</span> و<span class="en">Labs</span>، من <span class="en">Python</span> لحد الـ
+                <span class="en">Deployment</span>.
+              </p>
+            </article>
+
+            <article class="formula-card">
+              <span class="formula-idx" dir="ltr">02</span>
+              <h3 class="formula-title" dir="ltr">Practical Workshops</h3>
+              <p class="formula-text">
+                ورش أسبوعية عملية: <span class="en">Code Review</span> و<span class="en">Debugging</span> لشغلك، و<span class="en">Case Study</span> جديدة بـ <span class="en">Dataset</span> مختلف.
+              </p>
+            </article>
+
+            <article class="formula-card">
+              <span class="formula-idx" dir="ltr">03</span>
+              <h3 class="formula-title" dir="ltr">Impact Sessions</h3>
+              <p class="formula-text"><span class="en">Sessions</span> بتجهزك لسوق العمل:</p>
+              <ul class="mt-3 flex flex-wrap gap-1.5">
+                <li class="impact-chip">Interview Skills</li>
+                <li class="impact-chip">Communication Skills</li>
+                <li class="impact-chip">CV Writing</li>
+                <li class="impact-chip">LinkedIn Profile</li>
+                <li class="impact-chip">Presentation Skills</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- 5-hour timeline -->
+          <div class="mt-20 max-w-3xl">
+            <h3 data-reveal class="text-2xl font-bold sm:text-[1.7rem]">شكل الـ <span class="en">Session</span> الواحدة</h3>
+            <p data-reveal style="--d: 60ms" class="mt-3 leading-8 text-slate-450">
+              كل <span class="en">Technical Session</span> ماشية بنفس الترتيب: فكرة، كود، وبعدين ربط بالـ <span class="en">Business</span>.
+            </p>
+          </div>
+          <div data-reveal class="sflow mt-8">
+            <ol class="sflow-steps">
+              <!-- 1. Concept -->
+              <li class="sflow-step step-concept">
+                <div class="sflow-art" aria-hidden="true">
+                  <svg viewBox="0 0 160 96" fill="none">
+                    <circle cx="80" cy="44" r="30" fill="currentColor" opacity=".14" />
+                    <path d="M80 22a17 17 0 0 0-10 30.8V60h20v-7.2A17 17 0 0 0 80 22Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+                    <path d="M72 68h16M74 75h12" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                    <path d="M80 10v-4M104 20l3-3M56 20l-3-3M114 44h4M42 44h4" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                    <rect x="14" y="58" width="26" height="24" rx="5" fill="currentColor" opacity=".22" />
+                    <path d="M19 76l5-6 4 3 7-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                    <rect x="120" y="58" width="26" height="24" rx="5" fill="currentColor" opacity=".22" />
+                    <circle cx="133" cy="70" r="6" stroke="currentColor" stroke-width="2.4" />
+                    <path d="M133 64v6h6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="sflow-meta">
+                  <span class="sflow-num" dir="ltr">01</span>
+                  <span class="sflow-time" dir="ltr">Hour 1 · 60m</span>
+                </div>
+                <h4 class="sflow-title" dir="ltr">Concept &amp; Real-World Example</h4>
+                <p class="sflow-text">بنشرح الفكرة الأساسية ونربطها بمثال حقيقي من السوق، عشان تعرف هتستخدمها فين.</p>
+              </li>
+
+              <!-- 2. Live coding -->
+              <li class="sflow-step step-code is-main">
+                <div class="sflow-code" dir="ltr" aria-hidden="true">
+                  <div class="sflow-code-bar"><i></i><i></i><i></i><span>session.ipynb</span></div>
+                  <pre><span class="c-k">import</span> pandas <span class="c-k">as</span> pd
 <span class="c-k">from</span> sklearn.ensemble <span class="c-k">import</span> RandomForestClassifier
 
 df = pd.read_csv(<span class="c-s">"customers.csv"</span>)
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 <span class="c-f">print</span>(model.score(X_test, y_test))  <span class="c-c"># 0.91</span><span class="sflow-caret"></span></pre>
-              </div>
-              <div class="sflow-meta">
-                <span class="sflow-num" dir="ltr">02</span>
-                <span class="sflow-time" dir="ltr">Hours 2–4 · 180m</span>
-                <span class="sflow-badge">أغلب وقت الـ <span class="en">Session</span></span>
-              </div>
-              <h4 class="sflow-title" dir="ltr">Guided Live Coding</h4>
-              <p class="sflow-text">بنكتب الكود سوا خطوة بخطوة، وكل سطر بتفهمه وانت بتكتبه، من غير نسخ ولصق.</p>
-            </li>
-
-            <!-- 3. Business / Security -->
-            <li class="sflow-step step-biz">
-              <div class="sflow-art" aria-hidden="true">
-                <svg viewBox="0 0 160 96" fill="none">
-                  <circle cx="80" cy="46" r="30" fill="currentColor" opacity=".14"/>
-                  <path d="M80 16l24 9v17c0 16-10.5 27-24 32-13.5-5-24-16-24-32V25l24-9Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-                  <path d="M69 45l8 8 15-16" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <rect x="12" y="56" width="30" height="24" rx="5" fill="currentColor" opacity=".22"/>
-                  <path d="M22 56v-4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4M12 66h30" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-                  <rect x="118" y="56" width="30" height="24" rx="5" fill="currentColor" opacity=".22"/>
-                  <rect x="126" y="66" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2.4"/>
-                  <path d="M129 66v-3a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2.4"/>
-                </svg>
-              </div>
-              <div class="sflow-meta">
-                <span class="sflow-num" dir="ltr">03</span>
-                <span class="sflow-time" dir="ltr">Hour 5 · 60m</span>
-              </div>
-              <h4 class="sflow-title" dir="ltr">Business / Security Tip</h4>
-              <p class="sflow-text">نربط اللي اتعلمته بالـ <span class="en">Business</span>، أو ناخد نصيحة <span class="en">Security</span> هتحتاجها في الشغل.</p>
-            </li>
-          </ol>
-        </div>
-
-        <div class="mt-5 grid gap-5 lg:grid-cols-3">
-          <article data-reveal class="method-card">
-            <span class="method-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            </span>
-            <h3 class="font-semibold">Notebooks جاهزة لكل <span class="en">Session</span></h3>
-            <p class="mt-2 text-sm leading-7 text-slate-450">2 <span class="en">Notebooks</span> لكل <span class="en">Session</span>: واحد للشرح والتاني <span class="en">Student Lab</span> للتطبيق، شغالين على <span class="en">Jupyter</span> و<span class="en">Colab</span>.</p>
-          </article>
-          <article data-reveal style="--d:80ms" class="method-card">
-            <span class="method-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>
-            </span>
-            <h3 class="font-semibold"><span class="en">Real-World Datasets</span></h3>
-            <p class="mt-2 text-sm leading-7 text-slate-450">هتشتغل على <span class="en">Data</span> حقيقية من مجالات مختلفة: <span class="en">Sales, Telecom, Healthcare, Real Estate, E-Commerce</span>.</p>
-          </article>
-          <article data-reveal style="--d:160ms" class="method-card">
-            <span class="method-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 0 1 1-1h12l-2 4 2 4H5"/></svg>
-            </span>
-            <h3 class="font-semibold">3 <span class="en">Milestones</span> إجبارية</h3>
-            <p class="mt-2 text-sm leading-7 text-slate-450">في آخر كل مرحلة (<span class="en">Session 5</span> و<span class="en">13</span> و<span class="en">20</span>) هتسلّم مشروع متكامل بيتراجع ويتضاف للـ <span class="en">Portfolio</span>.</p>
-          </article>
-        </div>
-
-        <!-- Milestones track -->
-        <div data-reveal class="mt-5 rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
-          <div class="relative">
-            <div class="absolute inset-x-0 top-[22px] hidden h-px bg-ink/10 md:block" aria-hidden="true"></div>
-            <ol class="relative grid gap-8 md:grid-cols-3">
-              <li class="milestone">
-                <span class="milestone-dot">M1</span>
-                <p class="milestone-meta" dir="ltr">Session 05</p>
-                <h4 class="milestone-title" dir="ltr">Modular Python Data App</h4>
-                <p class="milestone-text">نظام <span class="en">OOP</span> لمعالجة البيانات، موثّق ومرفوع على <span class="en">GitHub</span>.</p>
+                </div>
+                <div class="sflow-meta">
+                  <span class="sflow-num" dir="ltr">02</span>
+                  <span class="sflow-time" dir="ltr">Hours 2–4 · 180m</span>
+                  <span class="sflow-badge">أغلب وقت الـ <span class="en">Session</span></span>
+                </div>
+                <h4 class="sflow-title" dir="ltr">Guided Live Coding</h4>
+                <p class="sflow-text">بنكتب الكود سوا خطوة بخطوة، وكل سطر بتفهمه وانت بتكتبه، من غير نسخ ولصق.</p>
               </li>
-              <li class="milestone">
-                <span class="milestone-dot">M2</span>
-                <p class="milestone-meta" dir="ltr">Session 13</p>
-                <h4 class="milestone-title" dir="ltr">End-to-End EDA & ML Project</h4>
-                <p class="milestone-text"><span class="en">EDA</span> كامل + <span class="en">Classification Model</span> مع شرح واضح للـ <span class="en">Metrics</span>.</p>
-              </li>
-              <li class="milestone">
-                <span class="milestone-dot milestone-dot-final">M3</span>
-                <p class="milestone-meta" dir="ltr">Session 20</p>
-                <h4 class="milestone-title" dir="ltr">Deployed AI Capstone</h4>
-                <p class="milestone-text"><span class="en">AI Web App</span> شغال <span class="en">Live</span> على <span class="en">Streamlit</span> + عرض ومناقشة المشروع النهائي.</p>
+
+              <!-- 3. Business / Security -->
+              <li class="sflow-step step-biz">
+                <div class="sflow-art" aria-hidden="true">
+                  <svg viewBox="0 0 160 96" fill="none">
+                    <circle cx="80" cy="46" r="30" fill="currentColor" opacity=".14" />
+                    <path d="M80 16l24 9v17c0 16-10.5 27-24 32-13.5-5-24-16-24-32V25l24-9Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+                    <path d="M69 45l8 8 15-16" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+                    <rect x="12" y="56" width="30" height="24" rx="5" fill="currentColor" opacity=".22" />
+                    <path d="M22 56v-4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4M12 66h30" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+                    <rect x="118" y="56" width="30" height="24" rx="5" fill="currentColor" opacity=".22" />
+                    <rect x="126" y="66" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2.4" />
+                    <path d="M129 66v-3a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2.4" />
+                  </svg>
+                </div>
+                <div class="sflow-meta">
+                  <span class="sflow-num" dir="ltr">03</span>
+                  <span class="sflow-time" dir="ltr">Hour 5 · 60m</span>
+                </div>
+                <h4 class="sflow-title" dir="ltr">Business / Security Tip</h4>
+                <p class="sflow-text">نربط اللي اتعلمته بالـ <span class="en">Business</span>، أو ناخد نصيحة <span class="en">Security</span> هتحتاجها في الشغل.</p>
               </li>
             </ol>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ============ OUTCOMES ============ -->
-    <section id="outcomes" class="section border-t border-ink/10 bg-white">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid gap-12 lg:grid-cols-12">
-          <div class="lg:col-span-4">
-            <div class="lg:sticky lg:top-28">
-              <p data-reveal class="eyebrow">Learning Outcomes</p>
-              <h2 data-reveal style="--d:60ms" class="section-title"><span class="en">Diploma Outcomes</span></h2>
-              <p data-reveal style="--d:120ms" class="mt-5 text-lg leading-8 text-slate-450">
-                في آخر الدبلومة هتكون قادر تعمل الـ 16 حاجة دول بإيدك — مش بس تفهمهم.
+          <div class="mt-5 grid gap-5 lg:grid-cols-3">
+            <article data-reveal class="method-card">
+              <span class="method-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg>
+              </span>
+              <h3 class="font-semibold">Notebooks جاهزة لكل <span class="en">Session</span></h3>
+              <p class="mt-2 text-sm leading-7 text-slate-450">
+                2 <span class="en">Notebooks</span> لكل <span class="en">Session</span>: واحد للشرح والتاني <span class="en">Student Lab</span> للتطبيق، شغالين على
+                <span class="en">Jupyter</span> و<span class="en">Colab</span>.
               </p>
-              <div data-reveal style="--d:180ms" class="mt-8 flex flex-wrap gap-2" id="outcomeFilters">
-                <button class="chip is-active" data-filter="all">All · 16</button>
-                <button class="chip" data-filter="python">Python</button>
-                <button class="chip" data-filter="data">Data</button>
-                <button class="chip" data-filter="ml">ML</button>
-                <button class="chip" data-filter="dl">DL & Deploy</button>
-              </div>
+            </article>
+            <article data-reveal style="--d: 80ms" class="method-card">
+              <span class="method-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3" />
+                  <path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5" />
+                  <path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3" />
+                </svg>
+              </span>
+              <h3 class="font-semibold"><span class="en">Real-World Datasets</span></h3>
+              <p class="mt-2 text-sm leading-7 text-slate-450">
+                هتشتغل على <span class="en">Data</span> حقيقية من مجالات مختلفة: <span class="en">Sales, Telecom, Healthcare, Real Estate, E-Commerce</span>.
+              </p>
+            </article>
+            <article data-reveal style="--d: 160ms" class="method-card">
+              <span class="method-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 0 1 1-1h12l-2 4 2 4H5" /></svg>
+              </span>
+              <h3 class="font-semibold">3 <span class="en">Milestones</span> إجبارية</h3>
+              <p class="mt-2 text-sm leading-7 text-slate-450">
+                في آخر كل مرحلة (<span class="en">Session 5</span> و<span class="en">13</span> و<span class="en">20</span>) هتسلّم مشروع متكامل بيتراجع ويتضاف للـ <span class="en">Portfolio</span>.
+              </p>
+            </article>
+          </div>
+
+          <!-- Milestones track -->
+          <div data-reveal class="mt-5 rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
+            <div class="relative">
+              <div class="absolute inset-x-0 top-[22px] hidden h-px bg-ink/10 md:block" aria-hidden="true"></div>
+              <ol class="relative grid gap-8 md:grid-cols-3">
+                <li class="milestone">
+                  <span class="milestone-dot">M1</span>
+                  <p class="milestone-meta" dir="ltr">Session 05</p>
+                  <h4 class="milestone-title" dir="ltr">Modular Python Data App</h4>
+                  <p class="milestone-text">نظام <span class="en">OOP</span> لمعالجة البيانات، موثّق ومرفوع على <span class="en">GitHub</span>.</p>
+                </li>
+                <li class="milestone">
+                  <span class="milestone-dot">M2</span>
+                  <p class="milestone-meta" dir="ltr">Session 13</p>
+                  <h4 class="milestone-title" dir="ltr">End-to-End EDA & ML Project</h4>
+                  <p class="milestone-text"><span class="en">EDA</span> كامل + <span class="en">Classification Model</span> مع شرح واضح للـ <span class="en">Metrics</span>.</p>
+                </li>
+                <li class="milestone">
+                  <span class="milestone-dot milestone-dot-final">M3</span>
+                  <p class="milestone-meta" dir="ltr">Session 20</p>
+                  <h4 class="milestone-title" dir="ltr">Deployed AI Capstone</h4>
+                  <p class="milestone-text"><span class="en">AI Web App</span> شغال <span class="en">Live</span> على <span class="en">Streamlit</span> + عرض ومناقشة المشروع النهائي.</p>
+                </li>
+              </ol>
             </div>
           </div>
-
-          <ol id="outcomeList" class="grid gap-3 sm:grid-cols-2 lg:col-span-8" dir="ltr"></ol>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ============ PROJECTS ============ -->
-    <section id="projects" class="section">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
-          <div class="lg:col-span-7">
-            <p data-reveal class="eyebrow">Graduate Portfolio</p>
-            <h2 data-reveal style="--d:60ms" class="section-title"><span class="en">Portfolio</span> بـ 10 مشاريع عملية</h2>
-          </div>
-          <p data-reveal style="--d:120ms" class="text-lg leading-8 text-slate-450 lg:col-span-5">
-            كل مشروع بيبني على اللي قبله — لحد ما توصل لـ <span class="en">AI Application</span> كامل شغال على الـ <span class="en">Cloud</span>.
-          </p>
-        </div>
-
-        <div id="projectGrid" class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
-
-        <!-- Case studies -->
-        <div data-reveal class="cstudy mt-8">
-          <div class="cstudy-head">
-            <div>
-              <p class="eyebrow eyebrow-dark">Real-World Case Studies</p>
-              <h3 class="mt-3 text-2xl font-bold leading-snug sm:text-[1.9rem]"><span class="cstudy-big" dir="ltr">4</span> <span class="en">Case Studies</span> من صناعات حقيقية</h3>
+      <!-- ============ OUTCOMES ============ -->
+      <section id="outcomes" class="section border-t border-ink/10 bg-white">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-12 lg:grid-cols-12">
+            <div class="lg:col-span-4">
+              <div class="lg:sticky lg:top-28">
+                <p data-reveal class="eyebrow">Learning Outcomes</p>
+                <h2 data-reveal style="--d: 60ms" class="section-title"><span class="en">Diploma Outcomes</span></h2>
+                <p data-reveal style="--d: 120ms" class="mt-5 text-lg leading-8 text-slate-450">في آخر الدبلومة هتكون قادر تعمل الـ 16 حاجة دول بإيدك — مش بس تفهمهم.</p>
+                <div data-reveal style="--d: 180ms" class="mt-8 flex flex-wrap gap-2" id="outcomeFilters">
+                  <button class="chip is-active" data-filter="all">All · 16</button>
+                  <button class="chip" data-filter="python">Python</button>
+                  <button class="chip" data-filter="data">Data</button>
+                  <button class="chip" data-filter="ml">ML</button>
+                  <button class="chip" data-filter="dl">DL & Deploy</button>
+                </div>
+              </div>
             </div>
-            <p class="cstudy-sub">كل <span class="en">Case Study</span> بتيجي بعد ما تخلص الجزء بتاعها في المنهج، وبتشتغل فيها على <span class="en">Data</span> شبه اللي هتقابلها في الشغل.</p>
+
+            <ol id="outcomeList" class="grid gap-3 sm:grid-cols-2 lg:col-span-8" dir="ltr"></ol>
           </div>
-
-          <ul class="cstudy-grid">
-            <li class="cs-card cs-estate">
-              <div class="cs-top">
-                <span class="cs-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg></span>
-                <span class="cs-num" dir="ltr">01</span>
-              </div>
-              <p class="cs-industry" dir="ltr">Real Estate</p>
-              <h4 class="cs-title" dir="ltr">Real Estate Price Prediction</h4>
-              <p class="cs-text">توقّع سعر الشقة من مساحتها ومكانها ومواصفاتها.</p>
-              <div class="cs-foot" dir="ltr"><span class="cs-chip">Regression</span><span class="cs-when">After Session 12</span></div>
-            </li>
-            <li class="cs-card cs-senti">
-              <div class="cs-top">
-                <span class="cs-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M9 13.5s1 1.5 3 1.5 3-1.5 3-1.5"/><path d="M9.5 9.5h.01M14.5 9.5h.01"/></svg></span>
-                <span class="cs-num" dir="ltr">02</span>
-              </div>
-              <p class="cs-industry" dir="ltr">E-Commerce</p>
-              <h4 class="cs-title" dir="ltr">Sentiment Analysis</h4>
-              <p class="cs-text">تحلّل تعليقات العملاء وتعرف مين راضي ومين مش راضي.</p>
-              <div class="cs-foot" dir="ltr"><span class="cs-chip">NLP</span><span class="cs-when">After Sessions 13–14</span></div>
-            </li>
-            <li class="cs-card cs-fraud">
-              <div class="cs-top">
-                <span class="cs-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/><path d="M6.5 15h4"/><path d="M17 13.5v2M17 17.5h.01"/></svg></span>
-                <span class="cs-num" dir="ltr">03</span>
-              </div>
-              <p class="cs-industry" dir="ltr">Banking</p>
-              <h4 class="cs-title" dir="ltr">Fraud Detection</h4>
-              <p class="cs-text">تكتشف عمليات الدفع المشبوهة وسط آلاف العمليات العادية.</p>
-              <div class="cs-foot" dir="ltr"><span class="cs-chip">Classification</span><span class="cs-when">After Session 15</span></div>
-            </li>
-            <li class="cs-card cs-churn">
-              <div class="cs-top">
-                <span class="cs-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 4.5 2"/><path d="M16 19h6"/></svg></span>
-                <span class="cs-num" dir="ltr">04</span>
-              </div>
-              <p class="cs-industry" dir="ltr">Telecom</p>
-              <h4 class="cs-title" dir="ltr">Customer Churn Prediction</h4>
-              <p class="cs-text">تتوقع مين من العملاء ممكن يسيب الشركة، عشان تلحقه قبل ما يمشي.</p>
-              <div class="cs-foot" dir="ltr"><span class="cs-chip">Classification</span><span class="cs-when">After Session 18</span></div>
-            </li>
-          </ul>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ============ EXTRAS ============ -->
-    <section id="extras" class="section border-t border-ink/10 bg-white">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl">
-          <p data-reveal class="eyebrow">EraaSoft Extras</p>
-          <h2 data-reveal style="--d:60ms" class="section-title">مزايا إضافية</h2>
-          <p data-reveal style="--d:120ms" class="mt-5 text-lg leading-8 text-slate-450">اللي بتاخده من إيراسوفت مش بيخلص بآخر <span class="en">Session</span>.</p>
-        </div>
-
-        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          <article data-reveal class="extra-card">
-            <span class="extra-tag" dir="ltr">ProSeries</span>
-            <h3 class="extra-title">لقاءات مع خبراء</h3>
-            <p class="extra-text"><span class="en">Meetups</span> مع ناس شغالة في المجال بيشاركوا خبراتهم الحقيقية.</p>
-          </article>
-          <article data-reveal style="--d:80ms" class="extra-card">
-            <span class="extra-tag" dir="ltr">Community</span>
-            <h3 class="extra-title">مجتمع بيدعمك</h3>
-            <p class="extra-text">دعم مستمر، <span class="en">Materials</span>، خصومات، ومقالات تقنية.</p>
-          </article>
-          <article data-reveal style="--d:160ms" class="extra-card">
-            <span class="extra-tag" dir="ltr">Partners</span>
-            <h3 class="extra-title">فرص توظيف وتدريب</h3>
-            <p class="extra-text">شراكات مع شركات للتوظيف والتدريب العملي.</p>
-          </article>
-          <article data-reveal style="--d:240ms" class="extra-card">
-            <span class="extra-tag" dir="ltr">Camps</span>
-            <h3 class="extra-title"><span class="en">Bootcamps</span> مكثفة</h3>
-            <p class="extra-text">تدريبات قصيرة ومكثفة على مهارات محددة.</p>
-          </article>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ============ CTA ============ -->
-    <section id="enroll" class="px-4 py-20 sm:px-6 lg:px-8">
-      <div data-reveal class="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-ink px-6 py-14 text-white sm:px-12 sm:py-16">
-        <div class="dark-grid pointer-events-none absolute inset-0 opacity-60" aria-hidden="true"></div>
-        <div class="cta-glow pointer-events-none absolute" aria-hidden="true"></div>
-        <div class="relative grid gap-10 lg:grid-cols-12 lg:items-center">
-          <div class="lg:col-span-7">
-            <p class="eyebrow eyebrow-dark">Next Cohort</p>
-            <h2 class="mt-3 text-3xl font-bold leading-tight sm:text-4xl">جاهز تبني أول <span class="en text-spark">AI Model</span> ليك؟</h2>
-            <p class="mt-4 max-w-xl text-lg leading-8 text-white/60">
-              سجّل بياناتك ونتواصل معاك نرشّحلك أقرب <span class="en">Group</span>. وفي الآخر هتاخد شهادة معتمدة من نقابة المهندسين المصرية (للمؤهلين حسب الشروط)، والدبلومة دي بتجهزك مباشرة لـ <span class="en">Advanced AI & GenAI Diploma</span>.
+      <!-- ============ PROJECTS ============ -->
+      <section id="projects" class="section">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
+            <div class="lg:col-span-7">
+              <p data-reveal class="eyebrow">Graduate Portfolio</p>
+              <h2 data-reveal style="--d: 60ms" class="section-title"><span class="en">Portfolio</span> بـ 10 مشاريع عملية</h2>
+            </div>
+            <p data-reveal style="--d: 120ms" class="text-lg leading-8 text-slate-450 lg:col-span-5">
+              كل مشروع بيبني على اللي قبله — لحد ما توصل لـ <span class="en">AI Application</span> كامل شغال على الـ <span class="en">Cloud</span>.
             </p>
           </div>
-          <div class="flex flex-col gap-3 lg:col-span-5">
-            <button type="button" data-open-form class="btn-spark btn-lg justify-center">
-              احجز مكانك
-              <svg class="h-4 w-4 -scale-x-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+
+          <div id="projectGrid" class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+
+          <!-- Case studies -->
+          <div data-reveal class="cstudy mt-8">
+            <div class="cstudy-head">
+              <div>
+                <p class="eyebrow eyebrow-dark">Real-World Case Studies</p>
+                <h3 class="mt-3 text-2xl font-bold leading-snug sm:text-[1.9rem]"><span class="cstudy-big" dir="ltr">4</span> <span class="en">Case Studies</span> من صناعات حقيقية</h3>
+              </div>
+              <p class="cstudy-sub">كل <span class="en">Case Study</span> بتيجي بعد ما تخلص الجزء بتاعها في المنهج، وبتشتغل فيها على <span class="en">Data</span> شبه اللي هتقابلها في الشغل.</p>
+            </div>
+
+            <ul class="cstudy-grid">
+              <li class="cs-card cs-estate">
+                <div class="cs-top">
+                  <span class="cs-icon" aria-hidden="true"
+                    ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 10.5 12 3l9 7.5" />
+                      <path d="M5 9.5V21h14V9.5" />
+                      <path d="M10 21v-6h4v6" /></svg
+                  ></span>
+                  <span class="cs-num" dir="ltr">01</span>
+                </div>
+                <p class="cs-industry" dir="ltr">Real Estate</p>
+                <h4 class="cs-title" dir="ltr">Real Estate Price Prediction</h4>
+                <p class="cs-text">توقّع سعر الشقة من مساحتها ومكانها ومواصفاتها.</p>
+                <div class="cs-foot" dir="ltr"><span class="cs-chip">Regression</span><span class="cs-when">After Session 12</span></div>
+              </li>
+              <li class="cs-card cs-senti">
+                <div class="cs-top">
+                  <span class="cs-icon" aria-hidden="true"
+                    ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z" />
+                      <path d="M9 13.5s1 1.5 3 1.5 3-1.5 3-1.5" />
+                      <path d="M9.5 9.5h.01M14.5 9.5h.01" /></svg
+                  ></span>
+                  <span class="cs-num" dir="ltr">02</span>
+                </div>
+                <p class="cs-industry" dir="ltr">E-Commerce</p>
+                <h4 class="cs-title" dir="ltr">Sentiment Analysis</h4>
+                <p class="cs-text">تحلّل تعليقات العملاء وتعرف مين راضي ومين مش راضي.</p>
+                <div class="cs-foot" dir="ltr"><span class="cs-chip">NLP</span><span class="cs-when">After Sessions 13–14</span></div>
+              </li>
+              <li class="cs-card cs-fraud">
+                <div class="cs-top">
+                  <span class="cs-icon" aria-hidden="true"
+                    ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2.5" y="5" width="19" height="14" rx="2.5" />
+                      <path d="M2.5 10h19" />
+                      <path d="M6.5 15h4" />
+                      <path d="M17 13.5v2M17 17.5h.01" /></svg
+                  ></span>
+                  <span class="cs-num" dir="ltr">03</span>
+                </div>
+                <p class="cs-industry" dir="ltr">Banking</p>
+                <h4 class="cs-title" dir="ltr">Fraud Detection</h4>
+                <p class="cs-text">تكتشف عمليات الدفع المشبوهة وسط آلاف العمليات العادية.</p>
+                <div class="cs-foot" dir="ltr"><span class="cs-chip">Classification</span><span class="cs-when">After Session 15</span></div>
+              </li>
+              <li class="cs-card cs-churn">
+                <div class="cs-top">
+                  <span class="cs-icon" aria-hidden="true"
+                    ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="9" cy="8" r="4" />
+                      <path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 4.5 2" />
+                      <path d="M16 19h6" /></svg
+                  ></span>
+                  <span class="cs-num" dir="ltr">04</span>
+                </div>
+                <p class="cs-industry" dir="ltr">Telecom</p>
+                <h4 class="cs-title" dir="ltr">Customer Churn Prediction</h4>
+                <p class="cs-text">تتوقع مين من العملاء ممكن يسيب الشركة، عشان تلحقه قبل ما يمشي.</p>
+                <div class="cs-foot" dir="ltr"><span class="cs-chip">Classification</span><span class="cs-when">After Session 18</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EXTRAS ============ -->
+      <section id="extras" class="section border-t border-ink/10 bg-white">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl">
+            <p data-reveal class="eyebrow">EraaSoft Extras</p>
+            <h2 data-reveal style="--d: 60ms" class="section-title">مزايا إضافية</h2>
+            <p data-reveal style="--d: 120ms" class="mt-5 text-lg leading-8 text-slate-450">اللي بتاخده من إيراسوفت مش بيخلص بآخر <span class="en">Session</span>.</p>
+          </div>
+
+          <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <article data-reveal class="extra-card">
+              <span class="extra-tag" dir="ltr">ProSeries</span>
+              <h3 class="extra-title">لقاءات مع خبراء</h3>
+              <p class="extra-text"><span class="en">Meetups</span> مع ناس شغالة في المجال بيشاركوا خبراتهم الحقيقية.</p>
+            </article>
+            <article data-reveal style="--d: 80ms" class="extra-card">
+              <span class="extra-tag" dir="ltr">Community</span>
+              <h3 class="extra-title">مجتمع بيدعمك</h3>
+              <p class="extra-text">دعم مستمر، <span class="en">Materials</span>، خصومات، ومقالات تقنية.</p>
+            </article>
+            <article data-reveal style="--d: 160ms" class="extra-card">
+              <span class="extra-tag" dir="ltr">Partners</span>
+              <h3 class="extra-title">فرص توظيف وتدريب</h3>
+              <p class="extra-text">شراكات مع شركات للتوظيف والتدريب العملي.</p>
+            </article>
+            <article data-reveal style="--d: 240ms" class="extra-card">
+              <span class="extra-tag" dir="ltr">Camps</span>
+              <h3 class="extra-title"><span class="en">Bootcamps</span> مكثفة</h3>
+              <p class="extra-text">تدريبات قصيرة ومكثفة على مهارات محددة.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CTA ============ -->
+      <section id="enroll" class="px-4 py-20 sm:px-6 lg:px-8">
+        <div data-reveal class="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-ink px-6 py-14 text-white sm:px-12 sm:py-16">
+          <div class="dark-grid pointer-events-none absolute inset-0 opacity-60" aria-hidden="true"></div>
+          <div class="cta-glow pointer-events-none absolute" aria-hidden="true"></div>
+          <div class="relative grid gap-10 lg:grid-cols-12 lg:items-center">
+            <div class="lg:col-span-7">
+              <p class="eyebrow eyebrow-dark">Next Cohort</p>
+              <h2 class="mt-3 text-3xl font-bold leading-tight sm:text-4xl">جاهز تبني أول <span class="en text-spark">AI Model</span> ليك؟</h2>
+              <p class="mt-4 max-w-xl text-lg leading-8 text-white/60">
+                سجّل بياناتك ونتواصل معاك نرشّحلك أقرب <span class="en">Group</span>. وفي الآخر هتاخد شهادة معتمدة من نقابة المهندسين المصرية (للمؤهلين حسب الشروط)، والدبلومة دي بتجهزك مباشرة لـ
+                <span class="en">Advanced AI & GenAI Diploma</span>.
+              </p>
+            </div>
+            <div class="flex flex-col gap-3 lg:col-span-5">
+              <button type="button" data-open-form class="btn-spark btn-lg justify-center">
+                احجز مكانك
+                <svg class="h-4 w-4 -scale-x-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+              <div class="grid gap-3 sm:grid-cols-2">
+                <a href="https://wa.me/201000143085" target="_blank" rel="noopener" class="btn-outline-dark btn-lg justify-center !font-sans">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z" />
+                  </svg>
+                  كلمنا على WhatsApp
+                </a>
+                <a href="tel:+201000143085" class="btn-outline-dark btn-lg justify-center" dir="ltr">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" />
+                  </svg>
+                  010 0014 3085
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ BOOKING MODAL ============ -->
+    <div id="formModal" class="modal" hidden>
+      <div class="modal-backdrop" data-close-form></div>
+      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="formTitle" aria-describedby="formDesc">
+        <button type="button" class="modal-close" data-close-form aria-label="إغلاق">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18" /></svg>
+        </button>
+
+        <!-- Form view -->
+        <div id="formView">
+          <div class="modal-head">
+            <p class="eyebrow">Reserve Your Seat</p>
+            <h2 id="formTitle" class="mt-2 text-2xl font-bold">احجز مكانك في الدبلومة</h2>
+            <p id="formDesc" class="mt-2 text-sm leading-7 text-slate-450">سيب بياناتك وفريقنا هيتواصل معاك. اكتب البيانات <b class="text-ink">بالإنجليزي</b>.</p>
+          </div>
+
+          <form id="leadForm" class="modal-body" novalidate>
+            <div class="field">
+              <label for="f-name">الاسم بالكامل</label>
+              <div class="input-wrap">
+                <input
+                  id="f-name"
+                  name="name"
+                  type="text"
+                  dir="ltr"
+                  lang="en"
+                  autocomplete="name"
+                  autocapitalize="words"
+                  spellcheck="false"
+                  maxlength="60"
+                  placeholder="Ahmed Mohamed"
+                  aria-describedby="e-name"
+                  required />
+                <span class="input-ok" aria-hidden="true"
+                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10" /></svg
+                ></span>
+              </div>
+              <p id="e-name" class="field-msg" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-email">البريد الإلكتروني</label>
+              <div class="input-wrap">
+                <input
+                  id="f-email"
+                  name="email"
+                  type="email"
+                  dir="ltr"
+                  lang="en"
+                  inputmode="email"
+                  autocomplete="email"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  maxlength="254"
+                  placeholder="name@example.com"
+                  aria-describedby="e-email"
+                  required />
+                <span class="input-ok" aria-hidden="true"
+                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10" /></svg
+                ></span>
+              </div>
+              <p id="e-email" class="field-msg" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-phone">رقم الموبايل</label>
+              <div class="input-wrap">
+                <input id="f-phone" name="phone" type="tel" dir="ltr" lang="en" inputmode="tel" autocomplete="tel" maxlength="18" placeholder="01012345678" aria-describedby="e-phone" required />
+                <span class="input-ok" aria-hidden="true"
+                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10" /></svg
+                ></span>
+              </div>
+              <p id="e-phone" class="field-msg" aria-live="polite"></p>
+            </div>
+
+            <!-- honeypot (spam bots) -->
+            <div class="hp" aria-hidden="true">
+              <label for="f-company">Company</label>
+              <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <p id="formError" class="form-error" role="alert" hidden></p>
+
+            <button id="formSubmit" type="submit" class="btn-primary btn-lg mt-2 w-full justify-center">
+              <span class="btn-label">ابعت البيانات</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
             </button>
-            <div class="grid gap-3 sm:grid-cols-2">
-            <a href="https://wa.me/201000143085" target="_blank" rel="noopener" class="btn-outline-dark btn-lg justify-center !font-sans">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
-              كلمنا على WhatsApp
-            </a>
-            <a href="tel:+201000143085" class="btn-outline-dark btn-lg justify-center" dir="ltr">
-              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-              010 0014 3085
-            </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ============ BOOKING MODAL ============ -->
-  <div id="formModal" class="modal" hidden>
-    <div class="modal-backdrop" data-close-form></div>
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="formTitle" aria-describedby="formDesc">
-      <button type="button" class="modal-close" data-close-form aria-label="إغلاق">
-        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
-      </button>
-
-      <!-- Form view -->
-      <div id="formView">
-        <div class="modal-head">
-          <p class="eyebrow">Reserve Your Seat</p>
-          <h2 id="formTitle" class="mt-2 text-2xl font-bold">احجز مكانك في الدبلومة</h2>
-          <p id="formDesc" class="mt-2 text-sm leading-7 text-slate-450">سيب بياناتك وفريقنا هيتواصل معاك. اكتب البيانات <b class="text-ink">بالإنجليزي</b>.</p>
+            <p class="mt-3 text-center text-xs text-slate-450">بياناتك بتستخدم بس عشان نتواصل معاك بخصوص الدبلومة.</p>
+          </form>
         </div>
 
-        <form id="leadForm" class="modal-body" novalidate>
-          <div class="field">
-            <label for="f-name">الاسم بالكامل</label>
-            <div class="input-wrap">
-              <input id="f-name" name="name" type="text" dir="ltr" lang="en" autocomplete="name" autocapitalize="words" spellcheck="false" maxlength="60" placeholder="Ahmed Mohamed" aria-describedby="e-name" required />
-              <span class="input-ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span>
-            </div>
-            <p id="e-name" class="field-msg" aria-live="polite"></p>
-          </div>
-
-          <div class="field">
-            <label for="f-email">البريد الإلكتروني</label>
-            <div class="input-wrap">
-              <input id="f-email" name="email" type="email" dir="ltr" lang="en" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="254" placeholder="name@example.com" aria-describedby="e-email" required />
-              <span class="input-ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span>
-            </div>
-            <p id="e-email" class="field-msg" aria-live="polite"></p>
-          </div>
-
-          <div class="field">
-            <label for="f-phone">رقم الموبايل</label>
-            <div class="input-wrap">
-              <input id="f-phone" name="phone" type="tel" dir="ltr" lang="en" inputmode="tel" autocomplete="tel" maxlength="18" placeholder="01012345678" aria-describedby="e-phone" required />
-              <span class="input-ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span>
-            </div>
-            <p id="e-phone" class="field-msg" aria-live="polite"></p>
-          </div>
-
-          <!-- honeypot (spam bots) -->
-          <div class="hp" aria-hidden="true">
-            <label for="f-company">Company</label>
-            <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off" />
-          </div>
-
-          <p id="formError" class="form-error" role="alert" hidden></p>
-
-          <button id="formSubmit" type="submit" class="btn-primary btn-lg mt-2 w-full justify-center">
-            <span class="btn-label">ابعت البيانات</span>
-            <span class="btn-spinner" aria-hidden="true"></span>
-          </button>
-          <p class="mt-3 text-center text-xs text-slate-450">بياناتك بتستخدم بس عشان نتواصل معاك بخصوص الدبلومة.</p>
-        </form>
-      </div>
-
-      <!-- Success view -->
-      <div id="successView" class="px-6 pb-8 pt-10 text-center sm:px-8" hidden tabindex="-1">
-        <span class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-emerald-50 text-emerald-600">
-          <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>
-        </span>
-        <h2 class="mt-5 text-2xl font-bold">تم استلام طلبك 🎉</h2>
-        <p class="mt-2 leading-7 text-slate-450">شكرًا <span id="successName" class="en font-semibold text-ink"></span>، فريقنا هيتواصل معاك قريب جدًا.</p>
-        <a href="https://wa.me/201000143085" target="_blank" rel="noopener" class="btn-ghost mt-6 justify-center">عايز ترد أسرع؟ كلمنا على <span class="en">WhatsApp</span></a>
+        <!-- Success view -->
+        <div id="successView" class="px-6 pb-8 pt-10 text-center sm:px-8" hidden tabindex="-1">
+          <span class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-emerald-50 text-emerald-600">
+            <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10" /></svg>
+          </span>
+          <h2 class="mt-5 text-2xl font-bold">تم استلام طلبك 🎉</h2>
+          <p class="mt-2 leading-7 text-slate-450">شكرًا <span id="successName" class="en font-semibold text-ink"></span>، فريقنا هيتواصل معاك قريب جدًا.</p>
+          <a href="https://wa.me/201000143085" target="_blank" rel="noopener" class="btn-ghost mt-6 justify-center">عايز ترد أسرع؟ كلمنا على <span class="en">WhatsApp</span></a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="bg-ink-900 text-white/70">
-    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
-      <div class="flex items-center gap-4">
-        <span class="inline-block shrink-0 rounded-lg bg-white px-2.5 py-1.5">
-          <img src="assets/img/eraasoft-logo.png" alt="EraaSoft" class="h-7 w-auto" loading="lazy" />
-        </span>
-        <p class="text-sm leading-6" dir="ltr"><span class="font-semibold text-spark">#EraaSoft</span> helps you reach your dream.</p>
+    <!-- ============ FOOTER ============ -->
+    <footer class="bg-ink-900 text-white/70">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+        <div class="flex items-center gap-4">
+          <span class="inline-block shrink-0 rounded-lg bg-white px-2.5 py-1.5">
+            <img src="assets/img/eraasoft-logo.png" alt="EraaSoft" class="h-7 w-auto" loading="lazy" />
+          </span>
+          <p class="text-sm leading-6" dir="ltr"><span class="font-semibold text-spark">#EraaSoft</span> helps you reach your dream.</p>
+        </div>
+
+        <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          <li><span class="text-white">الدقي:</span> 5 شارع مصدق - الدور الثالث</li>
+          <li><span class="text-white">م. نصر:</span> 6 شارع عماد الدين</li>
+        </ul>
+
+        <div class="flex gap-2">
+          <a href="https://www.facebook.com/eraasoft" target="_blank" rel="noopener" class="social" aria-label="Facebook"
+            ><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-.9.6-1 1-1h2V2h-3c-3 0-4 2.2-4 4.5V9H8v4h2v9h4v-9h3l.5-4H14z" /></svg
+          ></a>
+          <a href="https://www.linkedin.com/company/eraasoft" target="_blank" rel="noopener" class="social" aria-label="LinkedIn"
+            ><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z" /></svg
+          ></a>
+          <a href="https://www.youtube.com/@eraasoft" target="_blank" rel="noopener" class="social" aria-label="YouTube"
+            ><svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15V9l5.8 3-5.8 3z" /></svg
+          ></a>
+          <a href="https://www.tiktok.com/@eraa_soft" target="_blank" rel="noopener" class="social" aria-label="TikTok"
+            ><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 1 0 4.9 5.7V9.1a7.3 7.3 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.2-1.6z" /></svg
+          ></a>
+        </div>
       </div>
-
-      <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-        <li><span class="text-white">الدقي:</span> 5 شارع مصدق - الدور الثالث</li>
-        <li><span class="text-white">م. نصر:</span> 6 شارع عماد الدين</li>
-      </ul>
-
-      <div class="flex gap-2">
-          <a href="https://www.facebook.com/eraasoft" target="_blank" rel="noopener" class="social" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-.9.6-1 1-1h2V2h-3c-3 0-4 2.2-4 4.5V9H8v4h2v9h4v-9h3l.5-4H14z"/></svg></a>
-          <a href="https://www.linkedin.com/company/eraasoft" target="_blank" rel="noopener" class="social" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
-          <a href="https://www.youtube.com/@eraasoft" target="_blank" rel="noopener" class="social" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15V9l5.8 3-5.8 3z"/></svg></a>
-          <a href="https://www.tiktok.com/@eraa_soft" target="_blank" rel="noopener" class="social" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 1 0 4.9 5.7V9.1a7.3 7.3 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.2-1.6z"/></svg></a>
+      <div class="border-t border-white/10">
+        <p class="mx-auto max-w-7xl px-4 py-4 text-center text-xs text-white/40 sm:px-6 lg:px-8" dir="ltr">© <span id="year">2026</span> EraaSoft. All Rights Reserved.</p>
       </div>
-    </div>
-    <div class="border-t border-white/10">
-      <p class="mx-auto max-w-7xl px-4 py-4 text-center text-xs text-white/40 sm:px-6 lg:px-8" dir="ltr">© <span id="year">2026</span> EraaSoft. All Rights Reserved.</p>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="js/script.js?v=2"></script>
-</body>
+    <script src="js/script.js?v=3"></script>
+  </body>
 </html>

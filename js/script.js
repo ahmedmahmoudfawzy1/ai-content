@@ -96,7 +96,7 @@ const LEVELS = [
   },
   {
     id: 2,
-    title: 'Data Analysis, Applied Statistics & ML Foundations',
+    title: 'Data Science, Applied Statistics & ML Foundations',
     goal: 'Master real-world data wrangling, visual statistics, data privacy, and foundational Supervised Machine Learning.',
     project: {
       name: 'FinGuard',
